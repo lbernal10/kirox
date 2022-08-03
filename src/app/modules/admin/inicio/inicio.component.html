@@ -1,0 +1,48 @@
+<div class="flex flex-col flex-auto w-full">
+
+    <div class="flex flex-wrap w-full max-w-screen-xl mx-auto p-6 md:p-8">
+
+        <!-- Title and action buttons -->
+        <div class="flex items-center justify-between w-full">
+            <div>
+                <div class="text-3xl font-semibold tracking-tight leading-8">Proyectos Subidos</div>
+                <div class="font-medium tracking-tight text-secondary">Lista de los proyectos subidos en Kirox</div>
+            </div>
+            <div class="flex items-center ml-6">
+                <button
+                    class="hidden sm:inline-flex ml-3"
+                    mat-flat-button
+                    [color]="'primary'">
+                    <mat-icon
+                        class="icon-size-5"
+                        [svgIcon]="'heroicons_solid:save'"></mat-icon>
+                    <span class="ml-2">Información para taller</span>
+                </button>
+
+                <!-- Actions menu (visible on xs) -->
+                <div class="sm:hidden">
+                    <button
+                        [matMenuTriggerFor]="actionsMenu"
+                        mat-icon-button>
+                        <mat-icon [svgIcon]="'heroicons_outline:dots-vertical'"></mat-icon>
+                    </button>
+                    <mat-menu #actionsMenu="matMenu">
+                        <button mat-menu-item>Export</button>
+                        <button mat-menu-item>Settings</button>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full mt-6 md:mt-8">
+            <div class="flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden p-6">
+                aaa
+            </div>
+            <div class="flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden p-6">
+                bbb
+            </div>
+        </div>
+
+    </div>
+
+</div>

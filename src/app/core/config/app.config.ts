@@ -41,7 +41,7 @@ export const appConfig: AppConfig = {
         lg: '1280px',
         xl: '1440px'
     },
-    theme  : 'theme-default',
+    theme  : 'theme-amber',
     themes : [
         {
             id  : 'theme-default',
@@ -49,23 +49,23 @@ export const appConfig: AppConfig = {
         },
         {
             id  : 'theme-brand',
-            name: 'Brand'
+            name: 'Azul'
         },
         {
             id  : 'theme-teal',
-            name: 'Teal'
+            name: 'Verde'
         },
         {
             id  : 'theme-rose',
-            name: 'Rose'
+            name: 'Rosa'
         },
         {
             id  : 'theme-purple',
-            name: 'Purple'
+            name: 'Morado'
         },
         {
             id  : 'theme-amber',
-            name: 'Amber'
+            name: 'Ámbar'
         }
     ]
 };

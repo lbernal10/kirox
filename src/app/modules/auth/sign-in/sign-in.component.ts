@@ -8,6 +8,7 @@ import { AuthService } from 'app/core/auth/auth.service';
 @Component({
     selector     : 'auth-sign-in',
     templateUrl  : './sign-in.component.html',
+    styleUrls: ['./sign-in.scss'],
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
@@ -45,7 +46,7 @@ export class AuthSignInComponent implements OnInit
     {
         // Create the form
         this.signInForm = this._formBuilder.group({
-            email     : ['hughes.brian@company.com', [Validators.required, Validators.email]],
+            email     : ['test@kirox.com', [Validators.required, Validators.email]],
             password  : ['admin', Validators.required],
             rememberMe: ['']
         });

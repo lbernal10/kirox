@@ -96,7 +96,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-01.jpg',
             contact: 'Myra Dudley <myra.dudley@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -146,7 +146,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-01.jpg',
             contact: 'Shaw Murray <shaw.murray@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : moment().hour(18).minute(56).toISOString(), // Today - 18:56
         subject    : 'Delivery address confirmation',
         content    : 'Dear Brian,\n\nDolore consectetur est cupidatat ipsum reprehenderit anim quis veniam anim ipsum incididunt exercitation. Velit exercitation culpa eiusmod dolore labore irure. Duis esse quis elit pariatur labore occaecat esse voluptate dolore deserunt cillum irure. Aute qui nulla est exercitation qui sunt anim aliquip. Ex ad est velit laboris exercitation ea ut pariatur. Amet reprehenderit ut est id sunt commodo anim et est voluptate et.\n\nMagna aliqua incididunt non ut voluptate nulla aliqua exercitation elit consectetur cupidatat. Proident in reprehenderit occaecat laborum non eu amet id aliqua nulla dolore. Eiusmod quis adipisicing quis cupidatat labore.\n\nReprehenderit nulla ullamco est dolore ex irure sunt nostrud reprehenderit quis dolor. Tempor nostrud elit elit aute ut ut eiusmod laboris excepteur consequat ex. Velit id ex ullamco in. Ea elit Lorem Lorem aliquip amet consequat irure nisi qui cillum incididunt. Commodo aute Lorem eiusmod veniam consectetur aute eu dolore. Ea magna incididunt laboris quis quis et tempor dolore dolore ut nisi.\n\nBest Regards,\nShaw Murray',
@@ -166,7 +166,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-02.jpg',
             contact: 'Sanders Beck <sanders.beck@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -187,7 +187,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-03.jpg',
             contact: 'Zimmerman Gould <zimmerman.gould@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : moment().hour(22).minute(26).subtract(1, 'day').toISOString(), // Yesterday - 08:22
         subject    : 'Previous clients and their invoices',
         content    : 'Dear Brian,\n\nDo aute eu dolore officia laborum id anim fugiat incididunt nulla esse proident. Veniam veniam nostrud ut nisi magna ipsum ea eiusmod esse velit id aliqua nisi irure. Amet laborum fugiat deserunt est. Quis amet veniam anim nostrud irure cillum voluptate consequat qui cupidatat minim occaecat elit enim. Ut ut incididunt cillum sit sit irure culpa. Culpa exercitation minim velit eu. Ipsum exercitation excepteur et ad do sit.\n\nVeniam cupidatat officia aliqua ad excepteur cillum laboris deserunt esse laboris adipisicing reprehenderit. Reprehenderit anim consectetur pariatur labore do in irure. Ad consequat commodo non pariatur occaecat. Eiusmod cillum non anim consequat culpa nisi. Est nulla ut sint qui deserunt anim. Excepteur qui occaecat dolore nulla occaecat cupidatat aute sit laborum magna.\n\nConsequat aliqua commodo officia excepteur. Ex consectetur elit dolor exercitation ullamco amet laboris. Deserunt nulla non proident est pariatur reprehenderit reprehenderit. Ea nisi id aliqua cillum velit tempor ipsum dolor proident cillum eiusmod et ipsum anim. Elit non quis mollit enim Lorem cupidatat et labore. Laboris cillum reprehenderit aute veniam aliqua esse officia proident deserunt. Eiusmod laboris ullamco amet consectetur amet.\n\nKind Regards,\nZimmerman Gould',
@@ -205,7 +205,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-02.jpg',
             contact: 'Karina Alford <karina.alford@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -226,7 +226,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-03.jpg',
             contact: 'Carla Gray <carla.gray@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -247,7 +247,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-04.jpg',
             contact: 'Rice Cash <rice.cash@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -291,7 +291,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-04.jpg',
             contact: 'Elaine Ortiz <elaine.ortiz@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -317,7 +317,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-05.jpg',
             contact: 'Fleming Stone <fleming.stone@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -342,7 +342,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-06.jpg',
             contact: 'England Wiley <england.wiley@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : moment().hour(15).minute(36).subtract(5, 'day').toISOString(), // 2 days ago - 15:36
         subject    : 'Minim do reprehenderit dolor ipsum officia magna laborum est anim in fugiat',
         content    : 'Dear Brian,\n\nAd do minim id ad ex sit reprehenderit labore do occaecat fugiat ut enim. Et sunt dolore sint non consequat ut. Esse deserunt nostrud pariatur nulla ullamco nulla sit aliquip culpa sunt ipsum. Ut ad minim qui anim amet aute cupidatat. Est ullamco duis laboris nulla labore incididunt consectetur. Cillum sunt mollit nulla laborum non tempor veniam consequat.\n\nAmet fugiat velit id deserunt pariatur velit laboris consectetur quis officia. Culpa nostrud deserunt nostrud esse labore esse consequat labore fugiat. Nostrud duis ex nulla et do.\n\nPariatur mollit ex adipisicing nostrud nostrud occaecat. Id tempor irure cupidatat duis cillum cupidatat nostrud enim anim. Esse nisi pariatur nisi elit elit sit quis ullamco dolor dolore pariatur est sint. Sint ex aliqua id sunt sunt magna amet ex sit anim. Irure aliquip fugiat ipsum tempor irure nisi Lorem anim sit ullamco. Exercitation nostrud mollit est non enim.\n\nBest Regards,\nEngland Wiley',
@@ -364,7 +364,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-07.jpg',
             contact: 'Ingram Fowler <ingram.fowler@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sun Jan 07 2018 03:51:20 GMT+0000 (UTC)').toISOString(),
         subject    : 'Aliquip eiusmod pariatur adipisicing id consectetur sunt ad dolore consequat commodo',
         content    : 'Dear Brian,\n\nDolore sit occaecat est do fugiat sunt est amet nostrud. Aliqua ad veniam officia Lorem id aute fugiat laborum dolor magna dolor. Eiusmod nostrud qui sunt ut exercitation deserunt ipsum. Commodo veniam velit reprehenderit minim amet occaecat consectetur sint aliquip Lorem voluptate cupidatat. Aute aliquip do veniam nostrud nisi minim amet. Ex id ullamco non ea ullamco cillum et Lorem sunt sunt officia dolore excepteur.\n\nSit enim anim occaecat eu adipisicing velit ut excepteur consectetur sunt. Non fugiat deserunt quis fugiat eiusmod magna voluptate nisi commodo minim sunt dolore consequat labore. Pariatur ad aliqua do non labore exercitation aute minim culpa adipisicing qui. Anim et et anim dolore consequat fugiat amet aliquip nisi aliqua irure occaecat et laboris. Aute aliquip incididunt sit ipsum do. Ullamco in anim laboris incididunt tempor duis irure ipsum cillum duis ea. Magna culpa adipisicing ad ullamco id consequat qui ullamco cupidatat pariatur.\n\nMollit amet enim sint cupidatat eu aute exercitation dolor. Minim exercitation nostrud ullamco magna laboris. Pariatur proident aute proident et. Officia cillum pariatur nisi sint anim officia. Sunt minim anim ad tempor deserunt commodo magna labore incididunt ex ad nulla nulla ut. Sint ipsum aliqua dolor mollit do anim officia incididunt. Irure nulla ex elit id pariatur dolore et nostrud occaecat.\n\nCheers!\nIngram Fowler',
@@ -382,7 +382,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-05.jpg',
             contact: 'Diana Walsh <diana.walsh@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Fri Jun 29 2018 07:37:52 GMT+0000 (UTC)').toISOString(),
         subject    : 'Non anim id laborum in et id',
         content    : 'Dear Brian,\n\nTempor veniam do dolor laborum consectetur in sit incididunt nulla officia consectetur fugiat. In dolor consequat consectetur deserunt sit. Voluptate reprehenderit tempor dolor dolore nulla aliquip commodo elit cillum laboris occaecat laboris. Eu dolor magna velit ea commodo dolor. Occaecat sit mollit amet voluptate eiusmod aliqua sunt irure sunt fugiat ipsum eu. Consequat ea sit consequat esse.\n\nAdipisicing adipisicing voluptate duis ullamco sint anim sunt nostrud deserunt minim velit aute nisi et. Do ea cupidatat culpa eu qui. Lorem enim laboris amet officia fugiat nisi Lorem laborum ex. Aliquip nostrud sit esse nisi labore.\n\nId amet tempor tempor Lorem fugiat culpa. Elit nulla pariatur adipisicing proident. In qui esse eiusmod ad est minim ipsum mollit aute mollit ad duis aliqua.\n\nCheers!\nDiana Walsh',
@@ -427,7 +427,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-08.jpg',
             contact: 'Mckinney Marsh <mckinney.marsh@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Wed Jun 20 2018 15:24:03 GMT+0000 (UTC)').toISOString(),
         subject    : 'Adipisicing proident laborum qui deserunt adipisicing exercitation id sint',
         content    : 'Hi Brian,\n\nAmet eiusmod est ipsum fugiat. Laborum dolor exercitation esse nostrud cillum. Sunt laboris culpa incididunt ullamco sint veniam dolore tempor non irure ipsum. Laborum quis dolore dolor veniam quis exercitation sint dolore tempor occaecat pariatur officia. Non labore consectetur elit laborum exercitation ut exercitation pariatur Lorem.\n\nExercitation cillum sint exercitation incididunt laboris ut veniam irure sit. Id voluptate esse dolore in fugiat sit sint labore ex ea. Lorem laborum officia occaecat ipsum adipisicing do nostrud proident. Adipisicing fugiat anim aute amet consequat labore non et enim veniam anim. Elit do pariatur pariatur nulla consectetur sit anim cillum cillum.\n\nId qui pariatur enim laborum eu qui. Fugiat sint duis nisi culpa non. Labore cupidatat magna dolor eu et. Anim nulla elit ut eiusmod et excepteur aute culpa labore aliquip.\n\nCheers!\nMckinney Marsh',
@@ -451,7 +451,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-09.jpg',
             contact: 'Meyer Fuller <meyer.fuller@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -478,7 +478,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-06.jpg',
             contact: 'Carolina Wade <carolina.wade@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -503,7 +503,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-10.jpg',
             contact: 'Graves Huber <graves.huber@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sun Mar 25 2018 02:46:44 GMT+0000 (UTC)').toISOString(),
         subject    : 'Elit est aute anim ea culpa labore occaecat adipisicing officia',
         content    : 'Dear Brian,\n\nAd ex enim mollit quis nostrud nulla quis non minim voluptate cillum sint tempor mollit. Culpa anim occaecat aliquip do. Aliquip velit minim irure nostrud commodo eiusmod consequat ipsum consectetur deserunt dolore. Pariatur dolor dolore consectetur dolor aliqua dolor dolor deserunt minim commodo.\n\nAd qui qui ex et irure eiusmod. Excepteur esse fugiat officia non ex excepteur minim sint voluptate in incididunt. Exercitation culpa laboris non consequat excepteur pariatur est consequat aliquip occaecat ullamco laborum culpa. Ut fugiat duis incididunt incididunt excepteur enim sunt in amet irure nulla. Commodo officia fugiat do nostrud adipisicing sint voluptate voluptate dolor laboris. Nisi id aliqua quis id ullamco reprehenderit enim elit in magna. Proident consectetur voluptate id mollit sint do ipsum id sint proident.\n\nLaboris mollit nulla culpa veniam est dolor fugiat id consequat nulla veniam enim enim. Ullamco sunt proident fugiat cillum labore nostrud incididunt exercitation esse. Labore aliqua est non consequat in excepteur ullamco cupidatat aute nostrud proident. Consectetur enim veniam eiusmod incididunt culpa qui ipsum ea elit non nostrud reprehenderit incididunt veniam. Sint amet Lorem ipsum et dolore pariatur anim consectetur.\n\nBest Regards,\nGraves Huber',
@@ -523,7 +523,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-11.jpg',
             contact: 'Tucker Santiago <tucker.santiago@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Mon Sep 17 2018 14:41:42 GMT+0000 (UTC)').toISOString(),
         subject    : 'Ullamco qui ex eu ea officia labore incididunt',
         content    : 'Dear Brian,\n\nNon tempor sint incididunt adipisicing cupidatat laboris elit incididunt ipsum magna. Voluptate labore cillum irure dolor eu est commodo nulla. Cupidatat aliquip reprehenderit proident duis labore aliquip ullamco dolor occaecat anim esse tempor enim dolore. Elit veniam minim cupidatat aute ea voluptate eu et labore amet eu tempor.\n\nExercitation et exercitation labore cillum reprehenderit eiusmod anim magna ex. Lorem aliqua est velit eu. Qui et ullamco adipisicing elit eiusmod aliquip exercitation laboris consequat esse. Sint velit deserunt est quis ad proident sit eiusmod commodo eiusmod Lorem. Est consequat cillum magna est. Sunt pariatur voluptate elit officia aute.\n\nConsectetur velit deserunt non enim exercitation esse irure aliqua cillum sint in officia Lorem esse. Adipisicing consequat anim magna exercitation mollit. Ipsum irure in culpa mollit cillum eiusmod sunt amet consectetur anim eiusmod ea.\n\nBest Regards,\nTucker Santiago',
@@ -547,7 +547,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-07.jpg',
             contact: 'Becky Cain <becky.cain@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -593,7 +593,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-12.jpg',
             contact: 'Miller Vazquez <miller.vazquez@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -619,7 +619,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-13.jpg',
             contact: 'Delgado Stevens <delgado.stevens@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -645,7 +645,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-08.jpg',
             contact: 'Concepcion Cleveland <concepcion.cleveland@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Fri Aug 17 2018 04:41:26 GMT+0000 (UTC)').toISOString(),
         subject    : 'Aliqua pariatur non tempor velit eu amet sit et proident Lorem',
         content    : 'Hey Brian,\n\nPariatur anim aute excepteur consequat esse aliqua proident culpa duis duis veniam occaecat cupidatat eu. Lorem officia occaecat duis et exercitation mollit consectetur pariatur ut sit exercitation. Velit consectetur incididunt ad non nostrud dolor consequat esse deserunt. Nisi consectetur ea ut cupidatat ipsum. Sint cillum cupidatat elit laboris incididunt consectetur veniam fugiat sit voluptate officia.\n\nCillum est dolore et aliqua elit pariatur cupidatat eiusmod officia. Nisi officia velit commodo id anim qui commodo aliquip mollit. Quis magna sunt in duis laboris fugiat veniam. Proident consequat deserunt sunt amet officia veniam.\n\nIrure irure aliqua officia deserunt. Excepteur excepteur magna Lorem minim esse in sit. Magna elit laborum sunt magna labore eu eiusmod qui aliqua laborum.\n\nCheers!\nConcepcion Cleveland',
@@ -667,7 +667,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-09.jpg',
             contact: 'Robin Berger <robin.berger@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -690,7 +690,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-10.jpg',
             contact: 'Lynnette Burton <lynnette.burton@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -711,7 +711,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-11.jpg',
             contact: 'Carmella Rios <carmella.rios@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -735,7 +735,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-14.jpg',
             contact: 'Molina Pace <molina.pace@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Mon Sep 17 2018 21:45:31 GMT+0000 (UTC)').toISOString(),
         subject    : 'Dolor anim non labore est aliquip sunt pariatur',
         content    : 'Hi Brian,\n\nNon fugiat eu aute nulla deserunt Lorem id fugiat consectetur duis ut reprehenderit nostrud. Laboris culpa id nulla duis id proident. Eiusmod consequat commodo aute est deserunt aliquip esse aute qui aute et nostrud culpa.\n\nCillum minim reprehenderit sit nulla aliqua adipisicing deserunt non sit excepteur fugiat velit et. Amet excepteur non ipsum voluptate dolore irure. Laboris sit sunt id mollit et in nulla eiusmod duis ut tempor ea est. Dolor est laborum ipsum labore sint aliquip est minim ex. Aliqua cillum qui consectetur amet elit nostrud quis duis. Dolore consequat laborum laboris ullamco qui do cupidatat sunt deserunt ex elit cillum.\n\nVeniam exercitation eiusmod exercitation cupidatat sunt incididunt. Labore occaecat eiusmod sint consectetur eiusmod sunt quis ad Lorem ex. Ipsum labore ipsum nulla Lorem incididunt proident. Sit officia ut nostrud nisi ipsum adipisicing qui. Non nulla commodo nostrud aliqua Lorem consequat ea do dolore nisi veniam veniam occaecat. Tempor amet ex eiusmod irure aliquip minim. Laborum officia fugiat nisi magna.\n\nBest Regards,\nMolina Pace',
@@ -770,7 +770,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-12.jpg',
             contact: 'Olga Osborn <olga.osborn@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -798,7 +798,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-13.jpg',
             contact: 'Brooke Petersen <brooke.petersen@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -824,7 +824,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-15.jpg',
             contact: 'Estes Walter <estes.walter@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -847,7 +847,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-16.jpg',
             contact: 'Holman Oconnor <holman.oconnor@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sat Jan 13 2018 22:30:44 GMT+0000 (UTC)').toISOString(),
         subject    : 'Duis dolore eu sint anim ipsum commodo esse cillum ipsum culpa commodo',
         content    : 'Dear Brian,\n\nDolore amet sunt ullamco enim quis tempor enim pariatur nostrud id nulla adipisicing. Reprehenderit amet ex ullamco pariatur proident et amet consequat ipsum sit ut. Laboris fugiat nulla consequat nulla qui tempor dolore dolore minim nisi. Excepteur non est pariatur cupidatat adipisicing veniam ea cillum ex duis laborum ullamco.\n\nDo quis cupidatat adipisicing sint minim veniam velit amet nulla nisi tempor voluptate nulla adipisicing. Ex dolor adipisicing dolor ad cupidatat consectetur cillum ex. Non velit laborum fugiat est fugiat officia esse ullamco. Ut amet sit mollit dolor. Sit ipsum reprehenderit consectetur excepteur. Enim ad aliqua consequat ipsum labore laborum culpa aliqua dolor voluptate.\n\nVelit cupidatat labore sint id excepteur anim qui do do non. Esse tempor aute nisi aliqua velit ad elit nulla pariatur aliqua consectetur. Proident pariatur mollit cupidatat ullamco est velit ullamco dolore. Ipsum sunt reprehenderit consequat eu dolore nisi nostrud ipsum cillum. Quis non esse fugiat ipsum ad laboris aliquip eiusmod deserunt qui ipsum aliqua consequat duis. Ad nisi sunt sint ut officia adipisicing labore voluptate commodo ullamco exercitation.\n\nKind Regards,\nHolman Oconnor',
@@ -867,7 +867,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-17.jpg',
             contact: 'Oneill Irwin <oneill.irwin@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -895,7 +895,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-14.jpg',
             contact: 'Marcie Morgan <marcie.morgan@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -916,7 +916,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-18.jpg',
             contact: 'Crane Trevino <crane.trevino@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -944,7 +944,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-15.jpg',
             contact: 'Kristine Wiggins <kristine.wiggins@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -989,7 +989,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-16.jpg',
             contact: 'Terrie Carney <terrie.carney@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1010,7 +1010,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-19.jpg',
             contact: 'Goff Jennings <goff.jennings@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1037,7 +1037,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-20.jpg',
             contact: 'Browning Sanchez <browning.sanchez@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1062,7 +1062,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-01.jpg',
             contact: 'Carey Lyons <carey.lyons@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Tue May 01 2018 07:56:59 GMT+0000 (UTC)').toISOString(),
         subject    : 'Laboris esse ipsum esse eu do ipsum do incididunt',
         content    : 'Hello Brian,\n\nIpsum elit ut magna occaecat dolor sint reprehenderit eu incididunt sunt irure esse mollit. Sit fugiat amet laborum ullamco sit laborum Lorem irure minim ut. Labore aliqua dolore minim elit consequat sit. Labore mollit esse ad magna voluptate anim pariatur. Irure enim excepteur adipisicing cillum minim culpa elit nostrud consectetur quis laborum velit. Ea eiusmod aliqua ipsum ad tempor veniam fugiat elit.\n\nDolor mollit adipisicing ut duis cillum proident id sunt non sit cillum. Sit aliqua elit aute tempor cupidatat esse mollit do deserunt cillum velit irure cillum. Ea aliqua Lorem minim cupidatat elit Lorem.\n\nEu deserunt nostrud Lorem reprehenderit sit veniam consectetur proident. Duis elit duis excepteur sit proident est ut est cillum. Sit tempor aliqua qui laborum eu cillum laborum consequat adipisicing sit exercitation. Anim non do consequat duis pariatur. Velit excepteur magna enim tempor occaecat consequat exercitation laborum deserunt.\n\nKind Regards,\nCarey Lyons',
@@ -1082,7 +1082,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-02.jpg',
             contact: 'Hendrix Goodwin <hendrix.goodwin@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Mon Jan 22 2018 19:04:29 GMT+0000 (UTC)').toISOString(),
         subject    : 'Magna consectetur occaecat excepteur elit',
         content    : 'Hello Brian,\n\nSunt consequat elit aliquip sit nulla ad. Voluptate elit qui magna ipsum culpa pariatur laboris nisi sit laboris. Mollit eiusmod ut elit est aliquip nulla ea laborum. Irure ipsum officia cillum labore occaecat esse consequat ut culpa et ut.\n\nAliquip aliquip veniam aute velit aliquip culpa cillum. Eu culpa pariatur in exercitation est nostrud duis quis voluptate. Anim pariatur ipsum aliquip proident et enim veniam duis velit adipisicing id ad exercitation commodo. Sit commodo qui reprehenderit et elit officia in aliquip amet occaecat. Nulla aute officia duis cupidatat cillum. Commodo amet consequat qui ipsum nisi nulla veniam laborum. Et excepteur est irure non officia ipsum sunt fugiat exercitation eu laboris sunt.\n\nElit reprehenderit aute consectetur eiusmod sit pariatur elit fugiat irure id et. In in dolore sunt magna cillum excepteur minim aute. Lorem sint occaecat elit est sint ut ea eiusmod anim esse cillum anim enim. Officia sint velit qui minim veniam ut nisi reprehenderit occaecat laborum qui. Elit eiusmod commodo dolor sunt incididunt labore.\n\nBest Regards,\nHendrix Goodwin',
@@ -1105,7 +1105,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-17.jpg',
             contact: 'Leticia Fulton <leticia.fulton@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1128,7 +1128,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-18.jpg',
             contact: 'Carmen Shannon <carmen.shannon@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1152,7 +1152,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-19.jpg',
             contact: 'Hattie Snow <hattie.snow@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1179,7 +1179,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-20.jpg',
             contact: 'Brandi Bradley <brandi.bradley@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sat Nov 17 2018 10:51:44 GMT+0000 (UTC)').toISOString(),
         subject    : 'Eiusmod nulla incididunt nostrud est mollit quis velit in non irure elit consectetur commodo irure',
         content    : 'Hey Brian,\n\nOfficia ad enim aliqua ex labore nisi. Commodo cillum non occaecat laboris. Irure eu ut voluptate officia excepteur.\n\nNostrud ad proident qui cupidatat exercitation labore occaecat in. Aliquip culpa veniam magna eiusmod proident irure reprehenderit pariatur adipisicing velit. Aliqua non labore tempor irure do duis ut voluptate.\n\nNon sit dolore voluptate sint ullamco proident enim non do dolor deserunt nisi velit. Quis pariatur esse sunt quis voluptate ut minim proident officia exercitation ipsum ipsum cillum. Duis non nostrud ullamco excepteur occaecat. Deserunt sit sint quis et ad. Nisi enim excepteur magna laboris occaecat laborum non esse sit enim mollit. Et elit eiusmod eiusmod Lorem ex qui elit adipisicing proident aute eu.\n\nBest Regards,\nBrandi Bradley',
@@ -1215,7 +1215,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-01.jpg',
             contact: 'Patsy Potter <patsy.potter@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1236,7 +1236,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-02.jpg',
             contact: 'Kathleen Cox <kathleen.cox@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1257,7 +1257,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-03.jpg',
             contact: 'Kristina Ramirez <kristina.ramirez@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Tue Mar 06 2018 16:13:56 GMT+0000 (UTC)').toISOString(),
         subject    : 'Ea eu cupidatat voluptate magna et Lorem veniam aute ipsum consectetur nisi voluptate',
         content    : 'Dear Brian,\n\nVoluptate esse cillum dolor aliqua. Qui aliqua consectetur tempor irure dolor sunt excepteur eu. Aliqua incididunt velit id minim consequat.\n\nLorem cupidatat aliqua enim fugiat ex aliqua fugiat do ut sint eiusmod. Ex Lorem incididunt velit laboris exercitation aliqua commodo est velit nisi excepteur aute dolor eu. Ad culpa excepteur non laboris occaecat aute sunt ea nostrud ut exercitation fugiat laboris. Ad eiusmod in culpa cupidatat sit pariatur deserunt velit velit elit aliqua duis eiusmod enim.\n\nFugiat ut proident consectetur aliquip consequat sunt ipsum adipisicing. Nisi velit eiusmod sunt voluptate do ea voluptate esse veniam deserunt consectetur Lorem laboris labore. Consectetur aute quis id nisi cillum magna elit veniam fugiat elit aliqua. Mollit aute laborum incididunt sit voluptate consectetur magna do do in duis sunt non culpa.\n\nKind Regards,\nKristina Ramirez',
@@ -1280,7 +1280,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-03.jpg',
             contact: 'Mays Glass <mays.glass@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Thu Jan 04 2018 11:10:36 GMT+0000 (UTC)').toISOString(),
         subject    : 'Culpa ex pariatur aliqua reprehenderit do occaecat nulla ipsum culpa adipisicing',
         content    : 'Hello Brian,\n\nQuis qui elit eiusmod sint adipisicing in. Adipisicing ipsum reprehenderit id tempor ut. Amet reprehenderit mollit commodo proident nulla velit aliqua ut labore ullamco ea reprehenderit proident deserunt. Consequat deserunt laborum consectetur ea aliquip. Lorem est cillum esse esse consequat sunt enim in deserunt velit. Consectetur velit sunt dolore fugiat eu dolor occaecat occaecat consequat et adipisicing ex ullamco. Officia labore esse esse ipsum ex laborum irure est id veniam aliqua sunt do.\n\nVeniam aute mollit elit duis. Voluptate veniam fugiat occaecat culpa velit fugiat. Irure cillum qui ullamco cillum ut. Culpa id eu nostrud reprehenderit. Aliquip irure cillum tempor non ex. Ex cillum aute minim ut anim sunt dolore cupidatat exercitation ex. In id nostrud sunt ut ea quis aliqua fugiat nostrud fugiat qui dolore adipisicing.\n\nExercitation sint fugiat ullamco id. Consectetur anim duis dolor eiusmod consectetur enim officia dolor elit velit do in laboris id. Reprehenderit fugiat nostrud ea elit do consectetur anim quis enim esse nostrud. Ea ullamco sit anim consequat anim cillum ullamco nostrud commodo fugiat occaecat mollit sint et. Consequat et do do mollit nostrud eiusmod ut magna. Id tempor cillum duis nisi anim velit officia incididunt. Cillum aliqua pariatur laboris deserunt commodo laboris amet.\n\nBest Regards,\nMays Glass',
@@ -1302,7 +1302,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-04.jpg',
             contact: 'Barber Zimmerman <barber.zimmerman@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1325,7 +1325,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-04.jpg',
             contact: 'Ginger Fry <ginger.fry@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1350,7 +1350,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-05.jpg',
             contact: 'Gardner Burnett <gardner.burnett@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Mon Mar 19 2018 13:34:20 GMT+0000 (UTC)').toISOString(),
         subject    : 'Labore anim ullamco labore nisi eiusmod duis commodo',
         content    : 'Hello Brian,\n\nAute et mollit quis proident proident. Tempor qui sint proident nulla sit ut nulla incididunt enim. Ut cillum nulla nostrud irure sit. Excepteur culpa magna sunt velit consectetur proident labore laborum amet cillum ex elit excepteur nisi. Consectetur voluptate incididunt nulla dolore in culpa excepteur.\n\nQuis duis consequat est elit pariatur deserunt incididunt in enim excepteur deserunt. Aliquip ea exercitation eiusmod deserunt. Qui incididunt consectetur tempor sunt labore id minim deserunt pariatur adipisicing do. Officia nisi pariatur in ea eiusmod Lorem ut commodo.\n\nLaborum ipsum consectetur excepteur cupidatat labore culpa Lorem. Enim pariatur eu aliqua nisi. Tempor pariatur dolore fugiat nulla est tempor incididunt id cupidatat.\n\nCheers!\nGardner Burnett',
@@ -1371,7 +1371,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-05.jpg',
             contact: 'Lula Lucas <lula.lucas@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1399,7 +1399,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-06.jpg',
             contact: 'Mcguire Crosby <mcguire.crosby@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Fri Mar 09 2018 04:54:41 GMT+0000 (UTC)').toISOString(),
         subject    : 'Eiusmod esse pariatur ipsum elit laborum tempor cillum amet irure labore duis ad amet aliqua',
         content    : 'Hey Brian,\n\nNisi laborum deserunt eiusmod veniam eiusmod aliqua dolor. Nostrud dolor deserunt occaecat ipsum sit. Sint nisi magna adipisicing duis id velit pariatur magna est tempor ad.\n\nEt ea pariatur duis voluptate irure. Dolore nisi exercitation nulla officia. Ea eiusmod amet aliqua ut ea velit veniam eu aliqua. Commodo est nisi nulla nulla in eu dolor eiusmod enim do consequat aliqua reprehenderit. Proident ad nulla reprehenderit incididunt incididunt ut. Anim deserunt officia ad dolor ex occaecat veniam mollit ex voluptate occaecat ullamco amet duis.\n\nDuis esse cillum in sit deserunt. Consequat ut tempor consequat qui. Laboris esse ex est ipsum et id est in magna tempor amet irure veniam. Occaecat veniam pariatur Lorem pariatur mollit ullamco occaecat. Labore dolor sit irure sit. Sunt sint dolore ex voluptate nisi sit cillum fugiat aliqua dolore dolore irure sunt commodo. Anim ullamco duis consequat sint in nulla voluptate velit irure.\n\nKind Regards,\nMcguire Crosby',
@@ -1420,7 +1420,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-07.jpg',
             contact: 'Walsh Bender <walsh.bender@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1460,7 +1460,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-08.jpg',
             contact: 'Baker Guthrie <baker.guthrie@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1485,7 +1485,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-06.jpg',
             contact: 'Olivia Ratliff <olivia.ratliff@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1509,7 +1509,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-09.jpg',
             contact: 'Schneider Kirby <schneider.kirby@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1537,7 +1537,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-10.jpg',
             contact: 'Griffith Keith <griffith.keith@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Tue Dec 11 2018 06:27:01 GMT+0000 (UTC)').toISOString(),
         subject    : 'Ex occaecat qui veniam qui consectetur aliquip ad reprehenderit laborum proident',
         content    : 'Hi Brian,\n\nExercitation labore cupidatat incididunt velit laboris ipsum anim commodo in do fugiat ea. Incididunt labore quis pariatur laboris sint tempor. Lorem commodo do do ipsum aliqua. Consectetur occaecat ad incididunt consectetur do excepteur ea laborum. Laboris enim proident excepteur ea exercitation deserunt. Sit dolor fugiat velit adipisicing proident ut cillum nisi adipisicing.\n\nConsectetur quis id non mollit minim. Consectetur ut cupidatat enim occaecat sint ex dolor sunt pariatur mollit exercitation. Magna Lorem aliqua nostrud aute ut enim laboris dolore eiusmod est occaecat dolor fugiat occaecat.\n\nCommodo exercitation sit laboris aute deserunt nostrud occaecat do dolore cupidatat consectetur commodo. Cupidatat laborum excepteur voluptate commodo irure. Excepteur enim labore dolore adipisicing ut aute irure. Labore sunt dolor sint magna dolor consequat. Nulla deserunt mollit cillum adipisicing enim est voluptate minim pariatur aliqua elit sint do eiusmod.\n\nCheers!\nGriffith Keith',
@@ -1560,7 +1560,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-07.jpg',
             contact: 'Beverly Pugh <beverly.pugh@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1586,7 +1586,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-08.jpg',
             contact: 'Ila Mclaughlin <ila.mclaughlin@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Wed Aug 01 2018 13:55:15 GMT+0000 (UTC)').toISOString(),
         subject    : 'Enim proident sit dolor officia sit magna ea tempor',
         content    : 'Hey Brian,\n\nExcepteur ut minim qui minim mollit. Tempor cupidatat Lorem sint aliquip excepteur sunt est velit nostrud ea. Velit esse ea irure veniam. Dolore tempor nisi occaecat tempor laborum et nulla enim do sint.\n\nId officia ea ad ad occaecat occaecat consequat veniam ad magna cillum incididunt quis tempor. Veniam reprehenderit qui excepteur sint sunt proident ipsum. Exercitation nostrud eiusmod incididunt consequat enim velit sit qui veniam consectetur. Est exercitation tempor ea sunt enim nulla ea proident officia pariatur. Dolor aute exercitation cillum dolore eu sunt veniam id dolore voluptate ut nostrud deserunt. Eiusmod labore anim veniam labore anim nostrud ad nulla labore consequat enim nisi.\n\nLaboris fugiat quis aute duis reprehenderit ut pariatur non incididunt excepteur ea ut. Nisi deserunt tempor Lorem commodo ad pariatur aliquip duis tempor officia irure. Eu fugiat dolore exercitation veniam cillum.\n\nBest Regards,\nIla Mclaughlin',
@@ -1610,7 +1610,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-09.jpg',
             contact: 'Jenna Manning <jenna.manning@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1636,7 +1636,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-10.jpg',
             contact: 'Deann Hansen <deann.hansen@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1659,7 +1659,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-11.jpg',
             contact: 'Tisha Moore <tisha.moore@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Wed Mar 07 2018 05:58:09 GMT+0000 (UTC)').toISOString(),
         subject    : 'Qui irure ea qui labore fugiat ad voluptate esse',
         content    : 'Hey Brian,\n\nAnim ex voluptate in amet duis labore. Esse id ut exercitation labore velit irure amet laborum. Aliqua ex et est reprehenderit amet quis anim ut qui dolore et sit ea amet.\n\nEnim incididunt sunt deserunt voluptate tempor ut minim laborum pariatur Lorem esse ex cillum. Irure proident amet labore aliqua elit excepteur. Pariatur fugiat sit duis ut in elit.\n\nLorem proident duis occaecat eu proident reprehenderit incididunt amet magna officia et ut. Nisi do labore sit sit eiusmod nostrud consectetur proident enim. Ipsum culpa proident consequat nostrud.\n\nCheers!\nTisha Moore',
@@ -1682,7 +1682,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-12.jpg',
             contact: 'Janette Elliott <janette.elliott@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1706,7 +1706,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-13.jpg',
             contact: 'Bettie Wyatt <bettie.wyatt@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Mon Dec 03 2018 17:07:32 GMT+0000 (UTC)').toISOString(),
         subject    : 'Est aliquip nisi pariatur cupidatat veniam qui cillum eu sit ullamco voluptate minim',
         content    : 'Dear Brian,\n\nEsse laboris commodo ullamco dolor ipsum. Aute cillum velit in aliquip ad adipisicing pariatur ex tempor cillum eu cupidatat laborum. Consectetur aute cupidatat incididunt quis minim elit cupidatat.\n\nEiusmod ea eiusmod nostrud qui amet pariatur laboris non. Proident dolor et pariatur id duis minim enim. Aute ut dolore cupidatat velit sunt.\n\nVeniam magna laborum tempor nostrud aliqua tempor. Pariatur in do id do exercitation non dolor. In elit velit ad Lorem veniam minim Lorem voluptate sint ullamco consectetur aute est. Enim sunt reprehenderit id nisi id. Eu sint incididunt nulla consequat veniam reprehenderit.\n\nBest Regards,\nBettie Wyatt',
@@ -1727,7 +1727,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-11.jpg',
             contact: 'Hardy Dale <hardy.dale@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1751,7 +1751,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-14.jpg',
             contact: 'Eileen Bush <eileen.bush@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sat Feb 24 2018 12:22:13 GMT+0000 (UTC)').toISOString(),
         subject    : 'Lorem deserunt dolor sunt sit sit mollit',
         content    : 'Hey Brian,\n\nEu Lorem laborum qui elit id consequat ipsum ex. Minim aute proident aliquip non esse quis voluptate nisi enim. Velit Lorem ea exercitation adipisicing amet deserunt pariatur Lorem amet anim dolore ipsum. Tempor magna voluptate laboris fugiat. Elit ea fugiat cillum Lorem fugiat ipsum officia tempor sit excepteur pariatur minim sint proident.\n\nDeserunt adipisicing dolor do fugiat commodo dolor sit ut culpa ea officia Lorem officia. Nulla elit tempor nostrud nulla. Amet tempor deserunt labore irure est ut officia ullamco velit. Officia tempor anim ex dolor consequat dolore anim do velit qui laboris nisi ipsum. Aute ipsum aliqua ut ullamco laborum pariatur minim mollit consectetur ipsum.\n\nNisi commodo labore nostrud veniam ut aute dolore veniam in. Consectetur commodo proident incididunt aliqua reprehenderit ex nostrud est magna elit reprehenderit. Proident veniam sint occaecat ullamco labore aliquip eiusmod duis sint. Ea ex id eiusmod eu elit ullamco aliqua. Dolore consectetur magna eu voluptate ea aliquip eu et veniam ullamco deserunt magna.\n\nKind Regards,\nEileen Bush',
@@ -1771,7 +1771,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-15.jpg',
             contact: 'Melody Mcintosh <melody.mcintosh@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1794,7 +1794,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-12.jpg',
             contact: 'Dale Talley <dale.talley@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1820,7 +1820,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-13.jpg',
             contact: 'Britt Massey <britt.massey@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1847,7 +1847,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-16.jpg',
             contact: 'Madelyn Haynes <madelyn.haynes@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1874,7 +1874,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-14.jpg',
             contact: 'Rowland Sweet <rowland.sweet@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1896,7 +1896,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-17.jpg',
             contact: 'Fern Shaw <fern.shaw@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1917,7 +1917,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-18.jpg',
             contact: 'Lorraine Ballard <lorraine.ballard@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -1942,7 +1942,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-15.jpg',
             contact: 'Jennings Franklin <jennings.franklin@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -1964,7 +1964,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-19.jpg',
             contact: 'Colette Cole <colette.cole@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Fri Sep 21 2018 08:37:21 GMT+0000 (UTC)').toISOString(),
         subject    : 'Sit non consequat et fugiat id laboris',
         content    : 'Hello Brian,\n\nIpsum non nisi ut do occaecat pariatur et duis eiusmod sint. Consequat do eu adipisicing fugiat incididunt dolor proident cupidatat reprehenderit dolor proident. Duis non eiusmod sit enim esse fugiat sit amet tempor ea ad adipisicing quis aliquip. Labore in cillum ipsum officia est irure incididunt fugiat id in eu Lorem. Occaecat eu veniam voluptate fugiat fugiat laborum veniam voluptate. Do exercitation mollit fugiat duis deserunt. Mollit aute non quis ex officia non amet amet dolor ullamco sint sunt.\n\nDolore incididunt ad ad anim minim. Sunt reprehenderit duis occaecat labore dolore irure elit. Excepteur laboris et proident nulla magna duis et. Eiusmod veniam ea culpa cillum incididunt ad officia. Labore in non voluptate ullamco velit ex aliqua aliqua amet nisi incididunt exercitation. Labore qui est adipisicing labore anim officia ullamco aliquip anim commodo ipsum mollit.\n\nQuis cillum non consequat ea esse laboris duis mollit et id consectetur nisi eu pariatur. In fugiat culpa aliqua eu culpa ea nisi incididunt. Pariatur excepteur laborum nulla ea ex reprehenderit ea deserunt.\n\nKind Regards,\nColette Cole',
@@ -1986,7 +1986,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-20.jpg',
             contact: 'Kim Carlson <kim.carlson@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2011,7 +2011,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-01.jpg',
             contact: 'Rena Park <rena.park@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2032,7 +2032,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-16.jpg',
             contact: 'Haney Gibson <haney.gibson@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2054,7 +2054,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-02.jpg',
             contact: 'Freda Frank <freda.frank@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2077,7 +2077,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-17.jpg',
             contact: 'Burns White <burns.white@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2098,7 +2098,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-18.jpg',
             contact: 'Fischer Cervantes <fischer.cervantes@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Thu Dec 13 2018 03:52:15 GMT+0000 (UTC)').toISOString(),
         subject    : 'Amet aute tempor sit tempor minim nulla dolor commodo aute eu',
         content    : 'Hi Brian,\n\nCulpa nulla est deserunt ut. Culpa eu velit occaecat ut sint voluptate. Nostrud sint officia pariatur eiusmod commodo laborum. Proident consequat nostrud anim qui velit quis.\n\nVoluptate occaecat pariatur minim eu culpa ex sit nostrud. Amet id proident consequat commodo ullamco deserunt eu occaecat anim do exercitation sit quis non. Voluptate eiusmod aute cillum culpa sit. Dolore cillum ea ex reprehenderit occaecat ullamco. Est nulla minim est do adipisicing id in et nostrud voluptate. Proident eiusmod enim cupidatat minim. Amet minim sunt incididunt pariatur amet cupidatat eu exercitation officia laborum.\n\nId elit minim exercitation occaecat exercitation. Cupidatat officia duis duis id nisi nostrud quis dolor officia. Dolore occaecat aliqua eiusmod mollit commodo officia sunt sit laboris nisi excepteur irure duis fugiat.\n\nKind Regards,\nFischer Cervantes',
@@ -2119,7 +2119,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-19.jpg',
             contact: 'Cervantes Reyes <cervantes.reyes@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2144,7 +2144,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-20.jpg',
             contact: 'Cooke Whitney <cooke.whitney@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sat Jul 28 2018 14:16:37 GMT+0000 (UTC)').toISOString(),
         subject    : 'Est veniam aliquip culpa deserunt commodo ad laboris ad ullamco',
         content    : 'Hi Brian,\n\nVoluptate consequat ullamco eiusmod deserunt eu laborum ullamco Lorem minim eiusmod est eu elit esse. Enim ipsum irure occaecat magna. Esse labore irure incididunt mollit dolor veniam ut magna aliquip. In ex consequat culpa nisi in exercitation. Sunt tempor quis deserunt laborum nulla ad.\n\nVoluptate mollit nostrud consectetur amet enim dolor. Consequat deserunt eiusmod incididunt cupidatat ex anim aliquip minim mollit incididunt tempor. Quis quis deserunt et tempor sunt laboris quis non enim veniam nisi nulla. Ea adipisicing incididunt laboris incididunt exercitation voluptate exercitation ipsum velit duis aute cupidatat labore. Nulla ea non est deserunt proident deserunt qui irure quis enim occaecat cupidatat. Sint veniam consequat Lorem dolore commodo aliqua et. Ad commodo qui ad ea consectetur non dolore dolor.\n\nAnim exercitation id do laborum quis laborum elit officia cupidatat sunt consectetur officia ex excepteur. Cillum cupidatat et consectetur ex aliquip anim Lorem eiusmod nostrud reprehenderit. Magna ullamco qui incididunt dolore anim ad laborum. Laborum occaecat laboris consequat et esse nostrud elit anim amet incididunt aliquip mollit ad proident. Voluptate pariatur ex adipisicing dolore dolor adipisicing cupidatat tempor amet duis dolore sunt consequat qui. Mollit do ullamco enim nulla dolore proident in. Ipsum irure cillum irure aute culpa duis eu est dolore est laborum.\n\nKind Regards,\nCooke Whitney',
@@ -2162,7 +2162,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-03.jpg',
             contact: 'Lee Lloyd <lee.lloyd@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2188,7 +2188,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-01.jpg',
             contact: 'Benson Shields <benson.shields@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2210,7 +2210,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-02.jpg',
             contact: 'Emerson Whitehead <emerson.whitehead@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2237,7 +2237,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-04.jpg',
             contact: 'Annabelle Greene <annabelle.greene@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2260,7 +2260,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-03.jpg',
             contact: 'Dawson Lewis <dawson.lewis@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Fri Aug 03 2018 03:03:12 GMT+0000 (UTC)').toISOString(),
         subject    : 'Ipsum duis sint incididunt nulla in labore nulla',
         content    : 'Hello Brian,\n\nAdipisicing quis deserunt consectetur proident eiusmod velit irure minim dolore sunt aliqua aliqua. Dolore excepteur ea commodo consectetur. Qui veniam est do cillum non excepteur adipisicing excepteur quis sit. Do cupidatat consectetur pariatur nulla exercitation dolor exercitation mollit. Elit culpa ea mollit laboris anim nisi id velit. Elit esse ad commodo dolor culpa nostrud consequat Lorem laboris pariatur et esse. Nisi elit esse ad cupidatat commodo eiusmod irure aliquip sit deserunt id anim tempor.\n\nIrure deserunt dolore nisi magna ipsum ut qui amet elit consectetur ex pariatur. Aliquip anim nostrud enim exercitation commodo eiusmod mollit qui id nulla. Lorem aute exercitation commodo enim veniam ea aute laborum consequat sunt proident eu. Quis deserunt incididunt mollit adipisicing nostrud laboris. Laborum elit velit proident aliquip ex aliqua dolore magna cillum adipisicing nisi cillum sunt esse.\n\nCillum eu id cillum eu incididunt adipisicing pariatur est sint minim voluptate Lorem Lorem excepteur. Aliqua ipsum non occaecat aute eiusmod deserunt aliquip. Sit incididunt cupidatat pariatur exercitation laborum id qui ut pariatur deserunt fugiat occaecat occaecat incididunt. Amet ad do esse et aliquip magna ullamco commodo deserunt exercitation irure. Consequat dolor magna mollit laboris pariatur laboris.\n\nBest Regards,\nDawson Lewis',
@@ -2283,7 +2283,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-04.jpg',
             contact: 'Cole Dotson <cole.dotson@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2310,7 +2310,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-05.jpg',
             contact: 'Bernard Cunningham <bernard.cunningham@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Tue Aug 21 2018 08:51:03 GMT+0000 (UTC)').toISOString(),
         subject    : 'Consequat Lorem fugiat et veniam ad veniam proident excepteur laborum',
         content    : 'Dear Brian,\n\nEu voluptate exercitation nulla aliqua id laboris ipsum voluptate nulla ea laboris. Magna exercitation reprehenderit mollit velit irure minim elit officia eiusmod reprehenderit non quis. Esse sunt non nisi id irure commodo incididunt amet.\n\nAdipisicing quis mollit velit ullamco enim ad laborum ex dolor ut culpa exercitation sit commodo. Amet eu et ullamco ut elit anim nulla fugiat sint. Laborum tempor incididunt laboris id pariatur velit excepteur officia nostrud mollit occaecat sit. Nulla do fugiat tempor quis reprehenderit fugiat aute. Dolor laboris amet do anim occaecat sunt in duis reprehenderit cupidatat mollit consequat nisi.\n\nUllamco ad minim dolore excepteur amet ullamco quis esse officia voluptate. Ipsum ex dolore labore enim. Cupidatat cillum exercitation cupidatat id eu esse aute tempor ut qui sit.\n\nCheers!\nBernard Cunningham',
@@ -2333,7 +2333,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-06.jpg',
             contact: 'Edwards Mcconnell <edwards.mcconnell@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2358,7 +2358,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-05.jpg',
             contact: 'Lizzie Sanders <lizzie.sanders@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2385,7 +2385,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-06.jpg',
             contact: 'Elise Hicks <elise.hicks@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>',
             'Julie T. <julie.t@company.com>'
@@ -2409,7 +2409,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-07.jpg',
             contact: 'Sherri Roth <sherri.roth@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2434,7 +2434,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-07.jpg',
             contact: 'Skinner Hawkins <skinner.hawkins@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],
@@ -2458,7 +2458,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-08.jpg',
             contact: 'Velma Ellison <velma.ellison@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Thu Nov 01 2018 10:59:46 GMT+0000 (UTC)').toISOString(),
         subject    : 'Ex duis cupidatat qui velit',
         content    : 'Hey Brian,\n\nSint labore adipisicing consequat ipsum. Proident aute et reprehenderit sint laborum nulla dolor. Dolor commodo consectetur nulla id reprehenderit veniam enim culpa ad irure esse Lorem amet. Tempor laboris aute ea sint. Elit laboris eu aliquip tempor eu Lorem eu ex.\n\nMagna dolore officia in excepteur. Reprehenderit in ipsum ea ex voluptate reprehenderit et aliquip commodo deserunt excepteur nisi reprehenderit quis. Consectetur do mollit non nisi exercitation elit anim laboris elit cillum excepteur. Veniam qui deserunt culpa enim esse eu Lorem. Est in consequat cupidatat elit in nisi deserunt.\n\nProident consequat ea nisi eiusmod esse incididunt exercitation. Consequat labore veniam non elit duis aute eiusmod labore est irure. Aliquip velit minim nisi qui est. Consequat ea dolor nostrud incididunt. Nulla commodo consectetur occaecat eu nisi ullamco cillum culpa ea magna. Eiusmod quis in ex veniam duis esse do. Laboris quis mollit mollit ex nulla officia irure pariatur qui aute consectetur ad esse.\n\nCheers!\nVelma Ellison',
@@ -2479,7 +2479,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-09.jpg',
             contact: 'Tamara Fitzgerald <tamara.fitzgerald@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sat Feb 24 2018 15:37:16 GMT+0000 (UTC)').toISOString(),
         subject    : 'Et esse sit eiusmod dolore eiusmod ad sit ipsum adipisicing ut esse',
         content    : 'Dear Brian,\n\nIn exercitation pariatur id occaecat reprehenderit exercitation ullamco nostrud consequat nostrud anim labore reprehenderit. Pariatur ea amet eiusmod consequat aliquip culpa aute. Officia elit non nulla ullamco aliquip est nulla quis nostrud consequat irure.\n\nFugiat nisi labore excepteur non mollit duis. Irure voluptate fugiat duis ullamco exercitation cupidatat est ullamco culpa. Quis nisi nostrud nisi non commodo veniam Lorem officia proident fugiat elit exercitation consectetur. Cupidatat cupidatat mollit amet nisi voluptate et ea sint sint. Excepteur ad aute reprehenderit nisi dolore sint eu fugiat consequat nulla proident ipsum ad voluptate. Ea officia aute incididunt commodo consectetur aliquip sint. Irure veniam ipsum anim incididunt aliquip est enim consequat anim cillum veniam laborum enim laborum.\n\nAnim non eiusmod elit id cillum minim minim qui amet sint. Incididunt ullamco exercitation consequat ipsum sit eiusmod minim dolore sint laborum labore. Velit incididunt nulla consectetur duis duis. Sit labore duis nostrud tempor. Elit excepteur nostrud adipisicing eu quis ex. Aute aliquip esse laborum irure in officia qui voluptate laboris magna reprehenderit.\n\nKind Regards,\nTamara Fitzgerald',
@@ -2499,7 +2499,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-08.jpg',
             contact: 'Duncan Gilmore <duncan.gilmore@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Mon Dec 31 2018 08:15:40 GMT+0000 (UTC)').toISOString(),
         subject    : 'Ipsum non ad commodo dolor enim labore ullamco',
         content    : 'Hey Brian,\n\nDuis commodo commodo exercitation ex incididunt fugiat incididunt duis ex. Proident tempor nulla culpa consequat non est incididunt amet ipsum anim. Non ipsum irure consectetur nisi exercitation. Nostrud occaecat ullamco ad et tempor magna sint ea minim duis consectetur aute velit incididunt. Ad amet exercitation consectetur mollit proident minim anim excepteur nostrud.\n\nEt in nulla laboris minim ex excepteur culpa exercitation officia labore nostrud quis. Est officia velit ullamco aute consectetur Lorem consectetur voluptate qui eu. Elit non nulla laboris enim in esse quis. Pariatur ullamco cupidatat cupidatat non et anim in dolor magna quis Lorem dolore et. Sit ullamco cillum reprehenderit eu. Ut id ipsum duis occaecat occaecat.\n\nFugiat excepteur et aute magna fugiat ut consequat adipisicing quis deserunt id sint occaecat. Ut cupidatat est nisi fugiat enim laborum. Nostrud est nisi occaecat ut Lorem.\n\nKind Regards,\nDuncan Gilmore',
@@ -2517,7 +2517,7 @@ export const mails = [
             avatar : 'assets/images/avatars/female-10.jpg',
             contact: 'Betty Dean <betty.dean@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Thu Aug 16 2018 06:17:15 GMT+0000 (UTC)').toISOString(),
         subject    : 'Laborum magna cupidatat qui sint proident aliquip ut commodo aute sint',
         content    : 'Dear Brian,\n\nConsequat aliquip ut laboris non velit dolor fugiat. Nisi ut laborum amet occaecat proident deserunt excepteur sunt occaecat pariatur sint ullamco fugiat aliquip. Ea excepteur commodo magna ut deserunt. Reprehenderit eu quis nisi esse eiusmod ut ullamco. Esse est pariatur id labore anim cillum dolore nulla esse dolor eiusmod do magna est.\n\nDo fugiat dolore duis ex consequat amet sunt reprehenderit enim non dolore incididunt pariatur. Excepteur ipsum labore est cupidatat laborum do consectetur tempor ipsum eiusmod. Voluptate eiusmod nostrud occaecat nisi laboris et velit non nostrud. Nulla id commodo laboris culpa id cillum nostrud deserunt fugiat excepteur nisi irure laborum. Irure in aute ea non magna Lorem aute consequat excepteur duis occaecat cupidatat ea. Tempor Lorem ullamco ullamco occaecat ipsum duis aliqua velit labore dolore veniam. Mollit ex commodo qui esse.\n\nLabore et nostrud do dolor. Sit duis proident nulla mollit officia. Deserunt voluptate ad anim in id consectetur excepteur Lorem quis. Consectetur officia esse cillum Lorem aliqua ex sit proident qui occaecat. Deserunt magna in consectetur velit proident sint cupidatat commodo veniam sint cillum amet aliqua. Aute cillum officia culpa Lorem mollit amet culpa incididunt dolore voluptate minim. Aliqua fugiat aliquip nulla dolore elit aliqua quis veniam ullamco in adipisicing deserunt.\n\nCheers!\nBetty Dean',
@@ -2540,7 +2540,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-09.jpg',
             contact: 'Pate Gardner <pate.gardner@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         date       : new Date('Sat May 26 2018 10:36:30 GMT+0000 (UTC)').toISOString(),
         subject    : 'Non labore sit dolor quis in qui esse velit ad sit',
         content    : 'Hi Brian,\n\nMinim ea eiusmod eu cillum enim amet minim commodo reprehenderit ullamco pariatur sunt adipisicing excepteur. Laboris aute velit cillum aute laborum exercitation. Aute esse qui aliquip et proident excepteur nulla ullamco id quis culpa consectetur ea in. Aute ad dolor culpa voluptate deserunt consectetur Lorem ex est. Id consequat laborum qui elit velit. Nostrud incididunt ullamco ad aute officia adipisicing proident consectetur qui in fugiat elit. Qui sit officia amet ex occaecat irure.\n\nIncididunt sit est quis mollit ex nostrud dolore ullamco officia laboris. Reprehenderit labore anim ea tempor officia officia et duis cupidatat adipisicing dolore. Dolore exercitation minim culpa ut est magna aute adipisicing quis. Eiusmod nulla mollit nulla dolor elit aute incididunt aute officia tempor enim do. Fugiat tempor non dolore quis nisi do laborum qui.\n\nEst et cupidatat nulla laboris amet ut laboris. Lorem in esse culpa sunt laborum. Commodo est nisi ullamco esse veniam.\n\nKind Regards,\nPate Gardner',
@@ -2558,7 +2558,7 @@ export const mails = [
             avatar : 'assets/images/avatars/male-10.jpg',
             contact: 'Lawson Kidd <lawson.kidd@company.com>'
         },
-        to         : 'me <hughes.brian@company.com>',
+        to         : 'me <test@kirox.com>',
         cc         : [
             'Graham Belltower <graham.belltower@company.com>'
         ],

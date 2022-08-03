@@ -2,3 +2,10 @@
 /*  @ Import/write your custom styles here.
 /*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
 /* ----------------------------------------------------------------------------------------------------- */
+body.dark .mat-flat-button.mat-primary, body.dark .mat-raised-button.mat-primary, body.dark .mat-fab.mat-primary, body.dark .mat-mini-fab.mat-primary, body .dark .mat-flat-button.mat-primary, body .dark .mat-raised-button.mat-primary, body .dark .mat-fab.mat-primary, body .dark .mat-mini-fab.mat-primary {
+    color: #fff !important;
+}
+
+body.light .mat-flat-button.mat-primary, body.light .mat-raised-button.mat-primary, body.light .mat-fab.mat-primary, body.light .mat-mini-fab.mat-primary, body .light .mat-flat-button.mat-primary, body .light .mat-raised-button.mat-primary, body .light .mat-fab.mat-primary, body .light .mat-mini-fab.mat-primary {
+    color: #fff !important;
+}

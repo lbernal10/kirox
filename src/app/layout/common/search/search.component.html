@@ -15,10 +15,10 @@
             class="absolute ml-6 sm:ml-8"
             [svgIcon]="'heroicons_outline:search'"></mat-icon>
         <input
-            class="w-full h-full px-16 sm:px-18"
+            class="w-full h-full px-16 sm:px-18 dark"
             [formControl]="searchControl"
             [matAutocomplete]="matAutocomplete"
-            [placeholder]="'Search for a page or a contact'"
+            [placeholder]="'Buscar...'"
             (keydown)="onKeydown($event)"
             #barSearchInput>
         <mat-autocomplete
@@ -28,7 +28,7 @@
             <mat-option
                 class="py-0 px-6 text-md pointer-events-none text-secondary bg-transparent"
                 *ngIf="resultSets && !resultSets.length">
-                No results found!
+                ¡No se han encontrado resultados!
             </mat-option>
             <ng-container *ngFor="let resultSet of resultSets; trackBy: trackByFn">
                 <mat-optgroup class="flex items-center mt-2 px-2">
@@ -74,7 +74,7 @@
                 matInput
                 [formControl]="searchControl"
                 [matAutocomplete]="matAutocomplete"
-                [placeholder]="'Search for a page or a contact'"
+                [placeholder]="'Buscar documento...'"
                 (keydown)="onKeydown($event)">
         </mat-form-field>
         <mat-autocomplete

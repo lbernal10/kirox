@@ -165,3 +165,9 @@ body .dark {
     /* Use all-component-colors to only generate the colors */
     @include mat.all-component-colors($dark-theme);
 }
+
+
+.theme-amber { 
+    --fuse-primary: #E07E3C !important;
+    --fuse-primary-rgb: 224,126,60 !important;
+}

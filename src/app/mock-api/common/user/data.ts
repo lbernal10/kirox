@@ -4,5 +4,6 @@ export const user = {
     name  : 'Francisco Bernal',
     email : 'test@kirox.com',
     avatar: 'assets/images/avatars/avatar1.png',
-    status: 'online'
+    status: 'online',
+    rol: 'Administrador'
 };

@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/0484affb-22d1-4a90-9f40-af561ad3e912/microsoft.web/sites/subscriptions/0484affb-22d1-4a90-9f40-af561ad3e912/resourceGroups/kirox_group/providers/Microsoft.Web/sites/kirox",
+    "appService.deploySubpath": "dist\\fuse"
+}

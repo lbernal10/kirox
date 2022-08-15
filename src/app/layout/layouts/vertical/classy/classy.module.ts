@@ -17,10 +17,13 @@ import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { NoRightClickDirective } from 'app/no-right-click.directive';
 
 @NgModule({
     declarations: [
-        ClassyLayoutComponent
+        ClassyLayoutComponent,
+        NoRightClickDirective
     ],
     imports     : [
         HttpClientModule,
@@ -39,7 +42,8 @@ import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy
         SearchModule,
         ShortcutsModule,
         UserModule,
-        SharedModule
+        SharedModule,
+        MatTooltipModule
     ],
     exports     : [
         ClassyLayoutComponent

@@ -1,9 +1,9 @@
 <div class="w-full h-full">
-    <h2 mat-dialog-title>Solena - Boost your biological capital</h2>
+    <h2 mat-dialog-title>{{nombreD}}</h2>
     <mat-dialog-content class="mat-typography">
     <iframe 
-            src="http://docs.google.com/gview?url=https://almacenamientousys.blob.core.windows.net/documentos/Solena's Deck_Light Version SA1.pdf&embedded=true" 
-            style="width:1000px; height:350px;"
+            [src]="urlDocumento" 
+            style="width:1000px; height:800px;"
             sandbox="allow-same-origin allow-scripts" 
             frameborder="0">
         </iframe>

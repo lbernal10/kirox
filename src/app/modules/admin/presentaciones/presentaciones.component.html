@@ -26,32 +26,75 @@
 
         <div class="grid grid-cols-3 gap-8 w-full mt-8">
             <div class="col-span-2 flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
-                <fuse-card style="border-left: 5px solid #e07e3c;" class="flex flex-col w-full mt-8" #expandableCard01="fuseCard">
+                <fuse-card style="border-left: 5px solid #e07e3c;" class="flex flex-col w-full mt-8" #expandableCard01="fuseCard" *ngFor="let presentacion of presentaciones">
                     <div class="flex items-center mx-6 sm:mx-8 mt-6 mb-4">
                         <img class="w-10 h-10 rounded-full mr-4" src="assets/images/avatars/avatar1.png"
                             alt="Card cover image">
                         <div class="flex flex-col">
-                            <span class="font-semibold leading-none">Solena - Boost your biological capital</span>
+                            <span class="font-semibold leading-none">{{presentacion.tituloPresentacion}}</span>
                             <span class="text-sm text-secondary leading-none mt-1">Subido por <span
-                                    class="text-sm font-medium">Irving Rivera</span></span>
+                                    class="text-sm font-medium">{{presentacion.usuarioCreacion}}</span></span>
                         </div>
 
-                        <div class="text-sm ml-auto -mr-4">Publicado 01/05/2022 16:45 p.m.</div>
+                        <div class="text-sm ml-auto -mr-4">Publicado {{ presentacion.fechaCreacion | date: 'yyyy-MM-dd h:mm a'}}</div>
 
                     </div>
                     <div class="relative mb-4">
                         <div class="flex rounded overflow-hidden border">
                             <div class="flex-0 w-40">
-                                <img class="w-30 h-28 object-cover mt-8 pl-6 "
-                                    src="assets/images/Icons documentos/pdf.svg" alt="Card cover image">
+                                    <img
+                                *ngIf="presentacion.formato == 'PDF'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/pdf.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'DOC'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/doc.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'DOCX'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/doc.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'JPG'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/jpg.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'PNG'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/png.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'TXT'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/txt.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'XLS'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/xls.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'XML'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/xml.svg"
+                            />
+                            <img
+                                *ngIf="presentacion.formato == 'ZIP'"
+                                style="width: 100px"
+                                src="../../../../assets/images/Icons documentos/zip.svg"
+                            />
                             </div>
                             <div class="m-4">
-                                <div class="text-lg font-medium">Solena - Boost your biological capital</div>
+                                <div class="text-lg font-medium">{{presentacion.nombreDocumento}}</div>
                                 <div class="text-secondary mt-1">
-                                    We're solving the Global Food Crisis by controlling the Soil's Microbiome
+                                    {{presentacion.descripcionPresentacion}}
                                 </div>
-                                <div class="text-sm text-hint mt-2 pb-6"><a href="https://www.solena.ag/">https://www.solena.ag/</a></div>
-                                <button class="hidden sm:inline-flex" mat-flat-button [color]="'primary'" (click)="openDialog()">
+                                <div class="text-sm text-hint mt-2 pb-6"><a href="{{presentacion.urlOpcional}}">{{presentacion.urlOpcional}}</a></div>
+                                <button class="hidden sm:inline-flex" mat-flat-button [color]="'primary'" (click)="openDialog(presentacion.url,presentacion.tituloPresentacion)">
                                     <mat-icon class="icon-size-5" [svgIcon]="'heroicons_outline:eye'"></mat-icon>
                                     <span class="ml-2">Leer presentación</span>
                                 </button>
@@ -142,8 +185,6 @@
                         </div>
                     </ng-container>
                 </fuse-card>
-
-                
             </div>
             <div class=" ">
                 <div class="mt-4 text-2xl font-semibold leading-tight">Calendario de actividades</div>

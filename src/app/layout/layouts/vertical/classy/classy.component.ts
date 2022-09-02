@@ -5,7 +5,6 @@ import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
 import { FuseNavigationService, FuseVerticalNavigationComponent } from '@fuse/components/navigation';
 import { Navigation } from 'app/core/navigation/navigation.types';
 import { NavigationService } from 'app/core/navigation/navigation.service';
-import { User } from 'app/core/user/user.types';
 import { UserService } from 'app/core/user/user.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -13,7 +12,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { FolderService } from 'app/service/folder.service';
 import { AuthService } from 'app/core/auth/auth.service';
 
-
+import { Usuario } from 'app/models/usuario.interface';
 @Component({
     selector: 'classy-layout',
     templateUrl: './classy.component.html',
@@ -23,7 +22,7 @@ import { AuthService } from 'app/core/auth/auth.service';
 export class ClassyLayoutComponent implements OnInit, OnDestroy {
     isScreenSmall: boolean;
     navigation: Navigation;
-    user: User;
+    user: Usuario;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
     tipoRol: string;
     /**
@@ -68,9 +67,12 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
             });
 
         // Subscribe to the user service
-        this._userService.user$
+        this._userService.usuario$
             .pipe((takeUntil(this._unsubscribeAll)))
-            .subscribe((user: User) => {
+            .subscribe((user: Usuario) => {
+
+                console.log("user: "  + JSON.stringify(user))
+
                 this.user = user;
             });
 

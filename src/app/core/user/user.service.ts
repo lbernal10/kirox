@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, Observable, ReplaySubject, tap } from 'rxjs';
-import { User } from 'app/core/user/user.types';
+import { Usuario } from 'app/models/usuario.interface';
+import { environment } from "../../../environments/environment";
 
 @Injectable({
     providedIn: 'root'
 })
 export class UserService
 {
-    private _user: ReplaySubject<User> = new ReplaySubject<User>(1);
+    private _usuario: ReplaySubject<Usuario> = new ReplaySubject<Usuario>(1);
+    private httpHeaders = new HttpHeaders({
+        'Content-Type': 'application/json',
+    });
 
     /**
      * Constructor
@@ -26,16 +30,16 @@ export class UserService
      *
      * @param value
      */
-    set user(value: User)
-    {
-        // Store the value
-        this._user.next(value);
-    }
-
-    get user$(): Observable<User>
-    {
-        return this._user.asObservable();
-    }
+     set usuario(value: Usuario)
+     {
+         // Store the value
+         this._usuario.next(value);
+     }
+ 
+     get usuario$(): Observable<Usuario>
+     {
+         return this._usuario.asObservable();
+     }
 
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
@@ -44,11 +48,11 @@ export class UserService
     /**
      * Get the current logged in user data
      */
-    get(): Observable<User>
+    get(): Observable<Usuario>
     {
-        return this._httpClient.get<User>('api/common/user').pipe(
+        return this._httpClient.get<Usuario>('api/common/user').pipe(
             tap((user) => {
-                this._user.next(user);
+                this._usuario.next(user);
             })
         );
     }
@@ -58,12 +62,16 @@ export class UserService
      *
      * @param user
      */
-    update(user: User): Observable<any>
-    {
-        return this._httpClient.patch<User>('api/common/user', {user}).pipe(
-            map((response) => {
-                this._user.next(response);
-            })
-        );
+     update(usuario: Usuario): Observable<any>
+     {
+         return this._httpClient.patch<Usuario>('api/common/user', {usuario}).pipe(
+             map((response) => {
+                 this._usuario.next(response);
+             })
+         );
+     }
+
+     validarCorreo(correo: string): Observable<Usuario> {
+        return this._httpClient.get<Usuario>(`${environment.backendURL}validar/${correo}/`);
     }
 }

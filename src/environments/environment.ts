@@ -4,12 +4,12 @@
 
 export const environment = {
     production: false,
-    backendURL: 'http://localhost:8080'
-    /*secretClient: 'usysweb',
+    backendURL: 'http://localhost:8080',
+    secretClient: 'kiroxweb',
     secretPassword: '12345',
     claveSecret: 'clave.123',
     oauth: '/oauth',
-    token: '/token'*/
+    token: '/token'
 };
 
 /*

@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, of, switchMap, throwError } from 'rxjs';
 import { AuthUtils } from 'app/core/auth/auth.utils';
 import { UserService } from 'app/core/user/user.service';
+import { environment } from 'environments/environment';
+import jwt_decode from 'jwt-decode';
+import { HmacSHA256 } from 'crypto-js';
+import Base64 from 'crypto-js/enc-base64';
+import { Usuario } from 'app/models/usuario.interface';
 
 @Injectable()
 export class AuthService
@@ -90,20 +95,31 @@ export class AuthService
         // Throw error, if the user is already logged in
         if ( this._authenticated )
         {
-            return throwError('User is already logged in.');
+            return throwError('El usuario ya ha iniciado sesión.');
         }
 
-        return this._httpClient.post('api/auth/sign-in', credentials).pipe(
+        const credenciales = btoa(`${environment.secretClient}` + ':' + `${environment.secretPassword}`);
+        const httpHeaders = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded',
+                                              'Authorization': 'Basic ' + credenciales});
+    
+        let params = new URLSearchParams();
+        params.set('grant_type', 'password');
+        params.set('username', credentials.email);
+        params.set('password', credentials.password);
+    
+        return this._httpClient.post(`${environment.backendURL}${environment.oauth}${environment.token}`, params.toString(), {headers: httpHeaders}).pipe(
             switchMap((response: any) => {
 
                 // Store the access token in the local storage
-                this.accessToken = response.accessToken;
+                this.accessToken = response.access_token;
 
                 // Set the authenticated flag to true
                 this._authenticated = true;
 
                 // Store the user on the user service
-                this._userService.user = response.user;
+                this._userService.usuario = response.usuario;
+
+                console.log(JSON.stringify(response.usuario))
 
                 this.tipoUsuario = '3';
 
@@ -112,6 +128,7 @@ export class AuthService
                 return of(response);
             })
         );
+
     }
 
     /**
@@ -119,30 +136,20 @@ export class AuthService
      */
     signInUsingToken(): Observable<any>
     {
-        // Renew token
-        return this._httpClient.post('api/auth/refresh-access-token', {
-            accessToken: this.accessToken
-        }).pipe(
-            catchError(() =>
 
-                // Return false
-                of(false)
-            ),
-            switchMap((response: any) => {
+        if (this._verifyJWTToken(this.accessToken) ) {
+            this._authenticated = true;
 
-                // Store the access token in the local storage
-                this.accessToken = response.accessToken;
+            const usuarioToken = JSON.parse(JSON.stringify(this.getDecodedAccessToken(this.accessToken)));
 
-                // Set the authenticated flag to true
-                this._authenticated = true;
+            this._userService.usuario =  usuarioToken.usuario as Usuario;
 
-                // Store the user on the user service
-                this._userService.user = response.user;
-
-                // Return true
-                return of(true);
-            })
-        );
+            return of(true);
+        } else {
+            localStorage.removeItem('accessToken');
+            this._authenticated = false;
+            return  of(false);
+        } 
     }
 
     /**
@@ -165,9 +172,9 @@ export class AuthService
      *
      * @param user
      */
-    signUp(user: { name: string; email: string; password: string; company: string }): Observable<any>
+    signUp(usuario: Usuario): Observable<any>
     {
-        return this._httpClient.post('api/auth/sign-up', user);
+        return this._httpClient.post('http://localhost:8080/usuarios/', usuario);
     }
 
     /**
@@ -205,5 +212,56 @@ export class AuthService
 
         // If the access token exists and it didn't expire, sign in using it
         return this.signInUsingToken();
+    }
+
+    getDecodedAccessToken(token: string): any {
+        try {
+          return jwt_decode(token);
+        } catch(Error) {
+          return null;
+        }
+    }
+
+    /**
+     * Verify the given token
+     *
+     * @param token
+     * @private
+     */
+     private _verifyJWTToken(token: string): boolean
+     {
+         // Split the token into parts
+         const parts = token.split('.');
+         const header = parts[0];
+         const payload = parts[1];
+         const signature = parts[2];
+
+         // Re-sign and encode the header and payload using the secret
+         const signatureCheck = this._base64url(HmacSHA256(header + '.' + payload, `${environment.claveSecret}`));
+
+         // Verify that the resulting signature is valid
+         return (signature === signatureCheck);
+     }
+
+      /**
+     * Return base64 encoded version of the given string
+     *
+     * @param source
+     * @private
+     */
+    private _base64url(source: any): string
+    {
+        // Encode in classical base64
+        let encodedSource = Base64.stringify(source);
+
+        // Remove padding equal characters
+        encodedSource = encodedSource.replace(/=+$/, '');
+
+        // Replace characters according to base64url specifications
+        encodedSource = encodedSource.replace(/\+/g, '-');
+        encodedSource = encodedSource.replace(/\//g, '_');
+
+        // Return the base64 encoded string
+        return encodedSource;
     }
 }

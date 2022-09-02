@@ -17,3 +17,9 @@ export interface Rol {
     nombre?: string;
     estatus?: number;
 }
+
+export interface UsuarioPaginacion {
+    usuario: Usuario[];
+    totalPaginas: number;
+    totalRegistros: number;
+}

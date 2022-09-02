@@ -22,17 +22,17 @@ export class FolderService {
         formData.append("archivo", presentacion);
         console.log(JSON.stringify(formData))
         //return this.http.post<Folder>(`${environment.backendURL}/documento/subir/${idOrganizacion}/`, formData);
-        return this.http.post<Folder>(`${this.url}/documento/subir/${titulo_presentacion}/${descripcion_presentacion}/${taller}/${usuario}/`, formData);
+        return this.http.post<Folder>(`${environment.backendURL}/documento/subir/${titulo_presentacion}/${descripcion_presentacion}/${taller}/${usuario}/`, formData);
     }
 
     obtenerDocumentos(): Observable<DocumentoCustom[]> {
-        return this.http.post<DocumentoCustom[]>(`${this.url}/documento/all/`, {
+        return this.http.post<DocumentoCustom[]>(`${environment.backendURL}/documento/all/`, {
             headers: this.httpHeaders,
         });
     }
 
     guardarComentario(comentario: ComentarioSave): Observable<ComentarioSave>{
-        return this.http.post<ComentarioSave>(`${this.url}/documento/comentario/`, comentario, {
+        return this.http.post<ComentarioSave>(`${environment.backendURL}/documento/comentario/`, comentario, {
             headers: this.httpHeaders,
         });
     }

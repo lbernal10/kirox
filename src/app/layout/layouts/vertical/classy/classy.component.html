@@ -51,11 +51,12 @@
     </ng-container>
     <!-- Navigation footer hook -->
     <ng-container fuseVerticalNavigationContentFooter>
-        <div class="flex flex-0 items-center justify-center h-16 pr-6 pl-2 mt-2 mb-4">
+        <div class="flex flex-0 items-center justify-center h-16 pr-6 pl-2 mt-2 mb-4" *ngIf="user.rol.id == 3">
             <button
                     class="fuse-mat-button-large w-full mt-6"
                     mat-flat-button
-                    [color]="'primary'" >
+                    [color]="'primary'"
+                    (click)="openDialog()" >
                     <mat-icon svgIcon="heroicons_solid:download"></mat-icon>
                     <span>
                         Subir Archivo

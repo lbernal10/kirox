@@ -295,7 +295,7 @@ export class FuseVerticalNavigationComponent implements OnChanges, OnInit, After
         {
             this.name = this._fuseUtilsService.randomId();
         }
-
+        console.log( this.name);
         // Register the navigation component
         this._fuseNavigationService.registerComponent(this.name, this);
 

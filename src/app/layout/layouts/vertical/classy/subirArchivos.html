@@ -1,0 +1,48 @@
+<div class="form-container">
+    <h2 mat-dialog-title>
+        Subir Presentación
+    </h2>
+    <mat-dialog-content>
+        <form [formGroup]="formTaller">
+            <p>
+                <mat-form-field appearance="standard" style="width: 500px;">
+                    <mat-label>Presentación:</mat-label>
+                    <input matInput placeholder="Indique el nombre de la presentación"
+                        formControlName="nombrePresentacion">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="standard" style="width: 500px;">
+                    <mat-label>Descripción:</mat-label>
+                    <textarea matInput placeholder="Introducción de la presentación" formControlName="descripcion"></textarea>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="standard" style="width: 500px;">
+                    <mat-label>Taller</mat-label>
+                    <mat-select placeholder="Seleccione el taller a relación con la presentación" formControlName="tallerSelect">
+                        <mat-option>--</mat-option>
+                        <mat-option *ngFor="let taller of talleres" [value]="taller">
+                            {{taller.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <!--<p>{{formTaller.get('tallerSelect').value | json}}</p>-->
+            <p>
+                <button type="button" mat-raised-button (click)="fileInput.click()">Seleccionar Archivo</button>
+                <input hidden (change)="onFileSelected($event)" #fileInput type="file" formControlName="archivo" accept=".txt,.pdf,.docx,.doc,.jpg,.xls">
+                <span class="file-name">{{selectedFile?.name}}</span>
+            </p>
+            <br>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close color="primary">
+            Cancelar
+        </button>
+        <button mat-raised-button color="primary" (click)="subirArchivo()">
+            Subir
+        </button>
+    </mat-dialog-actions>
+</div>

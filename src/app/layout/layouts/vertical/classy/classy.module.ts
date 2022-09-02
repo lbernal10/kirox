@@ -9,21 +9,31 @@ import { FuseNavigationModule } from '@fuse/components/navigation';
 import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
 import { FuseFullscreenModule } from '@fuse/components/fullscreen/fullscreen.module';
 import { LanguagesModule } from 'app/layout/common/languages/languages.module';
-import { MessagesModule } from 'app/layout/common/messages/messages.module';
+//import { MessagesModule } from 'app/layout/common/messages/messages.module';
 import { NotificationsModule } from 'app/layout/common/notifications/notifications.module';
 import { QuickChatModule } from 'app/layout/common/quick-chat/quick-chat.module';
 import { SearchModule } from 'app/layout/common/search/search.module';
 import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
-import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy.component';
+import { ClassyLayoutComponent, subirArchivo } from 'app/layout/layouts/vertical/classy/classy.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NoRightClickDirective } from 'app/no-right-click.directive';
+
+import { FuseConfirmationModule } from '@fuse/services/confirmation';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import { MessagesModule } from 'primeng/messages';
+
 
 @NgModule({
     declarations: [
         ClassyLayoutComponent,
-        NoRightClickDirective
+        NoRightClickDirective,
+        subirArchivo
     ],
     imports     : [
         HttpClientModule,
@@ -43,7 +53,14 @@ import { NoRightClickDirective } from 'app/no-right-click.directive';
         ShortcutsModule,
         UserModule,
         SharedModule,
-        MatTooltipModule
+        MatTooltipModule,
+        FuseConfirmationModule,
+        MatDialogModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule
     ],
     exports     : [
         ClassyLayoutComponent

@@ -6,20 +6,25 @@ import { FuseNavigationService, FuseVerticalNavigationComponent } from '@fuse/co
 import { Navigation } from 'app/core/navigation/navigation.types';
 import { NavigationService } from 'app/core/navigation/navigation.service';
 import { UserService } from 'app/core/user/user.service';
-import { Usuario } from 'app/models/usuario.interface';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { FolderService } from 'app/service/folder.service';
+import { AuthService } from 'app/core/auth/auth.service';
 
+import { Usuario } from 'app/models/usuario.interface';
 @Component({
-    selector     : 'classy-layout',
-    templateUrl  : './classy.component.html',
-    encapsulation: ViewEncapsulation.None
+    selector: 'classy-layout',
+    templateUrl: './classy.component.html',
+    encapsulation: ViewEncapsulation.None,
+    providers: [ConfirmationService, MessageService]
 })
-export class ClassyLayoutComponent implements OnInit, OnDestroy
-{
+export class ClassyLayoutComponent implements OnInit, OnDestroy {
     isScreenSmall: boolean;
     navigation: Navigation;
     user: Usuario;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
-
+    tipoRol: string;
     /**
      * Constructor
      */
@@ -29,9 +34,10 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
         private _navigationService: NavigationService,
         private _userService: UserService,
         private _fuseMediaWatcherService: FuseMediaWatcherService,
-        private _fuseNavigationService: FuseNavigationService
-    )
-    {
+        private _fuseNavigationService: FuseNavigationService,
+        public dialog: MatDialog,
+        private _authService: AuthService
+    ) {
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -41,8 +47,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
     /**
      * Getter for current year
      */
-    get currentYear(): number
-    {
+    get currentYear(): number {
         return new Date().getFullYear();
     }
 
@@ -53,8 +58,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
     /**
      * On init
      */
-    ngOnInit(): void
-    {
+    ngOnInit(): void {
         // Subscribe to navigation data
         this._navigationService.navigation$
             .pipe(takeUntil(this._unsubscribeAll))
@@ -75,18 +79,19 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
         // Subscribe to media changes
         this._fuseMediaWatcherService.onMediaChange$
             .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe(({matchingAliases}) => {
+            .subscribe(({ matchingAliases }) => {
 
                 // Check if the screen is small
                 this.isScreenSmall = !matchingAliases.includes('md');
             });
+
+            this.tipoRol = this._authService.tipoUsuario;
     }
 
     /**
      * On destroy
      */
-    ngOnDestroy(): void
-    {
+    ngOnDestroy(): void {
         // Unsubscribe from all subscriptions
         this._unsubscribeAll.next(null);
         this._unsubscribeAll.complete();
@@ -101,15 +106,101 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
      *
      * @param name
      */
-    toggleNavigation(name: string): void
-    {
+    toggleNavigation(name: string): void {
         // Get the navigation
         const navigation = this._fuseNavigationService.getComponent<FuseVerticalNavigationComponent>(name);
 
-        if ( navigation )
-        {
+        if (navigation) {
             // Toggle the opened status
             navigation.toggle();
         }
     }
+
+    openDialog() {
+        const dialogRef = this.dialog.open(subirArchivo);
+    
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
+    }
+
+}
+
+
+@Component({
+    selector: 'subirArchivo',
+    templateUrl: 'subirArchivos.html',
+    styleUrls: ['subirArchivo.scss'],
+    providers: [ConfirmationService, MessageService]
+})
+export class subirArchivo  {
+    formTaller: FormGroup;
+
+    talleres = [{
+        id: 1,
+        name: 'Taller 1',
+        description: 'description 1'
+    }, {
+        id: 2,
+        name: 'Taller 2',
+        description: 'description 2'
+    }]
+
+    user: Usuario;
+    private _unsubscribeAll: Subject<any> = new Subject<any>();
+
+    constructor(private fb: FormBuilder,
+        public folderService: FolderService,
+        private messageService: MessageService,
+        public dialog: MatDialog,
+        private _userService: UserService
+        ) { }
+
+    ngOnInit() {
+
+        this.formTaller = this.fb.group({
+            tallerSelect: [null, Validators.required],
+            nombrePresentacion: [null, Validators.required],
+            descripcion: [null, Validators.required],
+            archivo: [null, Validators.required]
+        });
+
+        const toSelect = this.talleres.find(c => c.id == 3);
+        this.formTaller.get('tallerSelect').setValue(toSelect);
+        
+        // Subscribe to the user service
+        this._userService.usuario$
+            .pipe((takeUntil(this._unsubscribeAll)))
+            .subscribe((user: Usuario) => {
+
+                console.log("user: "  + JSON.stringify(user))
+
+                this.user = user;
+            });
+    }
+
+    selectedFile: any = null;
+    private archivo: File = null;
+
+    onFileSelected(event: any): void {
+        this.selectedFile = event.target.files[0] ?? null;
+        this.archivo = event.target.files[0];
+    }
+
+    public subirArchivo() : void {
+        
+        console.log(this.archivo);
+        console.log(this.formTaller.get('tallerSelect').value.id);
+        this.folderService.subirArchivo(this.archivo, this.formTaller.get('nombrePresentacion').value, this.formTaller.get('descripcion').value, this.formTaller.get('tallerSelect').value.id, this.user.nombre).subscribe((data) => {
+            this.messageService.add({
+                severity: 'success',
+                summary: 'Confirmado',
+                detail: 'Se subio la presentación.',
+            });
+            alert('Se subio la presentación.');
+            this.dialog.closeAll();
+            window.location.reload();
+        });
+    }
+
 }

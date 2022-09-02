@@ -1,15 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
 import { FuseNavigationItem, FuseNavigationService } from '@fuse/components/navigation';
 import { FuseMockApiService } from '@fuse/lib/mock-api';
 import { defaultNavigation } from 'app/mock-api/common/navigation/data';
 import { contacts } from 'app/mock-api/apps/contacts/data';
 import { tasks } from 'app/mock-api/apps/tasks/data';
+import { UserService } from 'app/core/user/user.service';
+import { Usuario } from 'app/models/usuario.interface';
+import { Subject, takeUntil } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
-export class SearchMockApi
+export class SearchMockApi 
 {
     private readonly _defaultNavigation: FuseNavigationItem[] = defaultNavigation;
     private readonly _contacts: any[] = contacts;
@@ -25,8 +28,11 @@ export class SearchMockApi
     {
         // Register Mock API handlers
         this.registerHandlers();
+        
     }
 
+
+    
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------
@@ -36,6 +42,10 @@ export class SearchMockApi
      */
     registerHandlers(): void
     {
+        console.log(this._defaultNavigation);
+           
+       
+       
         // Get the flat navigation and store it
         const flatNavigation = this._fuseNavigationService.getFlatNavigation(this._defaultNavigation);
 
@@ -127,4 +137,6 @@ export class SearchMockApi
                 return [200, results];
             });
     }
+
+    
 }

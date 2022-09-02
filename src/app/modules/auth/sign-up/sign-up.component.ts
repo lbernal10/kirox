@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
-
+import { Usuario } from 'app/models/usuario.interface';
+ 
 @Component({
     selector     : 'auth-sign-up',
     templateUrl  : './sign-up.component.html',
@@ -45,11 +46,11 @@ export class AuthSignUpComponent implements OnInit
     {
         // Create the form
         this.signUpForm = this._formBuilder.group({
-                name      : ['', Validators.required],
+                nombre      : ['', Validators.required],
+                organizacion      : ['', Validators.required],
+                telefono      : ['', Validators.required],
                 email     : ['', [Validators.required, Validators.email]],
-                password  : ['', Validators.required],
-                company   : [''],
-                agreements: ['', Validators.requiredTrue]
+                password  : ['', Validators.required]
             }
         );
     }
@@ -75,8 +76,25 @@ export class AuthSignUpComponent implements OnInit
         // Hide the alert
         this.showAlert = false;
 
+
+        let datos: Usuario;
+
+        datos = {
+            id: 0,
+            nombre: this.signUpForm.controls['nombre'].value,
+            organizacion: this.signUpForm.controls['organizacion'].value,
+            correo: this.signUpForm.controls['email'].value,
+            password: this.signUpForm.controls['password'].value,
+            telefono: this.signUpForm.controls['telefono'].value,
+            tokenPassword: null,
+            rol: {
+                id: 1
+            },
+            estatus: 2
+         };
+
         // Sign up
-        this._authService.signUp(this.signUpForm.value)
+        this._authService.signUp(datos)
             .subscribe(
                 (response) => {
 
@@ -85,20 +103,20 @@ export class AuthSignUpComponent implements OnInit
                 },
                 (response) => {
 
-                    // Re-enable the form
-                    this.signUpForm.enable();
+                        // Set the alert
+                        this.alert = {
+                            type   : 'error',
+                            message: response.error.message
+                        };
 
-                    // Reset the form
-                    this.signUpNgForm.resetForm();
+                        // Show the alert
+                        this.showAlert = true;
 
-                    // Set the alert
-                    this.alert = {
-                        type   : 'error',
-                        message: 'Something went wrong, please try again.'
-                    };
+                        // Re-enable the form
+                        this.signUpForm.enable();
 
-                    // Show the alert
-                    this.showAlert = true;
+                        // Reset the form
+                        this.signUpNgForm.resetForm();
                 }
             );
     }

@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false
+    production: false,
+    backendURL: 'http://localhost:8080',
+    secretClient: 'kiroxweb',
+    secretPassword: '12345',
+    claveSecret: 'clave.123',
+    oauth: '/oauth',
+    token: '/token'
 };
 
 /*

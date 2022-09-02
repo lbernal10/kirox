@@ -5,8 +5,8 @@ import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
 import { FuseNavigationService, FuseVerticalNavigationComponent } from '@fuse/components/navigation';
 import { Navigation } from 'app/core/navigation/navigation.types';
 import { NavigationService } from 'app/core/navigation/navigation.service';
-import { User } from 'app/core/user/user.types';
 import { UserService } from 'app/core/user/user.service';
+import { Usuario } from 'app/models/usuario.interface';
 
 @Component({
     selector     : 'classy-layout',
@@ -17,7 +17,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
 {
     isScreenSmall: boolean;
     navigation: Navigation;
-    user: User;
+    user: Usuario;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     /**
@@ -63,9 +63,12 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy
             });
 
         // Subscribe to the user service
-        this._userService.user$
+        this._userService.usuario$
             .pipe((takeUntil(this._unsubscribeAll)))
-            .subscribe((user: User) => {
+            .subscribe((user: Usuario) => {
+
+                console.log("user: "  + JSON.stringify(user))
+
                 this.user = user;
             });
 

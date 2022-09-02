@@ -90,7 +90,7 @@ export class AuthSignUpComponent implements OnInit
             rol: {
                 id: 1
             },
-            estatus: 2
+            estatus: 0
          };
 
         // Sign up

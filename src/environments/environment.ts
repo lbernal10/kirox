@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    backendURL: 'http://localhost:8080',
+    backendURL: 'https://kiroxback.azurewebsites.net',
     secretClient: 'kiroxweb',
     secretPassword: '12345',
     claveSecret: 'clave.123',

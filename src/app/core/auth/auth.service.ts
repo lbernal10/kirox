@@ -174,7 +174,7 @@ export class AuthService
      */
     signUp(usuario: Usuario): Observable<any>
     {
-        return this._httpClient.post('http://localhost:8080/usuarios/', usuario);
+        return this._httpClient.post(`${environment.backendURL}/usuarios/`, usuario);
     }
 
     /**

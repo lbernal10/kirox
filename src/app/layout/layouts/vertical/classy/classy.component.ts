@@ -146,12 +146,14 @@ export class subirArchivo  {
         description: 'description 2'
     }]
 
-    
+    user: Usuario;
+    private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     constructor(private fb: FormBuilder,
         public folderService: FolderService,
         private messageService: MessageService,
-        public dialog: MatDialog
+        public dialog: MatDialog,
+        private _userService: UserService
         ) { }
 
     ngOnInit() {
@@ -166,7 +168,15 @@ export class subirArchivo  {
         const toSelect = this.talleres.find(c => c.id == 3);
         this.formTaller.get('tallerSelect').setValue(toSelect);
         
-        
+        // Subscribe to the user service
+        this._userService.usuario$
+            .pipe((takeUntil(this._unsubscribeAll)))
+            .subscribe((user: Usuario) => {
+
+                console.log("user: "  + JSON.stringify(user))
+
+                this.user = user;
+            });
     }
 
     selectedFile: any = null;
@@ -181,7 +191,7 @@ export class subirArchivo  {
         
         console.log(this.archivo);
         console.log(this.formTaller.get('tallerSelect').value.id);
-        this.folderService.subirArchivo(this.archivo, this.formTaller.get('nombrePresentacion').value, this.formTaller.get('descripcion').value, this.formTaller.get('tallerSelect').value.id).subscribe((data) => {
+        this.folderService.subirArchivo(this.archivo, this.formTaller.get('nombrePresentacion').value, this.formTaller.get('descripcion').value, this.formTaller.get('tallerSelect').value.id, this.user.nombre).subscribe((data) => {
             this.messageService.add({
                 severity: 'success',
                 summary: 'Confirmado',

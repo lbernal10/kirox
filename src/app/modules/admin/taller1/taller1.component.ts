@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { AuthService } from 'app/core/auth/auth.service';
+import { UserService } from 'app/core/user/user.service';
 import { ComentarioSave } from 'app/models/comentarioSave.interface';
 import { DocumentoCustom } from 'app/models/documento.interface';
+import { Usuario } from 'app/models/usuario.interface';
 import { FolderService } from 'app/service/folder.service';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
     selector: 'app-taller1',
@@ -14,11 +17,13 @@ import { FolderService } from 'app/service/folder.service';
 export class Taller1Component implements OnInit {
     public presentaciones: DocumentoCustom[];
     public comentario: ComentarioSave;
-    tipoRol: string;
+    tipoRol: number;
     selected: Date | null;
+    user: Usuario;
+   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     constructor(public folderService: FolderService,
-        public dialog: MatDialog,private _authService: AuthService) { }
+        public dialog: MatDialog,private _userService: UserService) { }
 
     ngOnInit(): void {
         this.obtenerDocumentos();
@@ -30,7 +35,16 @@ export class Taller1Component implements OnInit {
             secuencia: 0,
             usuario: ''
         }
-        this.tipoRol = this._authService.tipoUsuario;
+        // Subscribe to the user service
+    this._userService.usuario$
+    .pipe((takeUntil(this._unsubscribeAll)))
+    .subscribe((user: Usuario) => {
+
+        console.log("user: "  + JSON.stringify(user))
+
+        this.user = user;
+        this.tipoRol = this.user.rol.id;
+    });
     }
 
     public obtenerDocumentos(): void {
@@ -63,7 +77,7 @@ export class Taller1Component implements OnInit {
         }else{
           this.comentario.comentario = "" + (<HTMLInputElement>document.getElementById("txtarea_"+event)).value.toString();
           this.comentario.id_documento = event;
-          this.comentario.usuario = this._authService.usuario;
+          this.comentario.usuario = this.user.nombre;
           this.folderService.guardarComentario(this.comentario).subscribe((data) => {
             this.obtenerDocumentos();
           });

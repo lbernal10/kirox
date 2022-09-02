@@ -109,7 +109,7 @@
 
                     <ng-container fuseCardExpansion>
                         <hr class="border-b m-0">
-                        <div class="flex flex-col mx-4 sm:mx-8 mt-6 mb-3" *ngIf="tipoRol == '1' || tipoRol == '3'">
+                        <div class="flex flex-col mx-4 sm:mx-8 mt-6 mb-3" *ngIf="user.rol.id == 1 || user.rol.id == 3 ">
                             <div class="flex items-start">
                                 <img class="w-12 h-12 rounded-full mr-5" src="assets/images/avatars/avatar1.png"
                                     alt="Card cover image">
@@ -137,7 +137,7 @@
                                         </span>
                                         <div class="flex items-center text-sm text-secondary mt-2">
                                             <span>Publicado &bull; {{ comentario.fechaPublicacion | date: 'yyyy-MM-dd h:mm a'}}</span>
-                                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="openDialogDeleteComentario(comentario.idComentario)">
+                                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="openDialogDeleteComentario(comentario.idComentario)" *ngIf="user.rol.id == 3 ">
                                                 <mat-icon>delete_forever</mat-icon>
                                             </button>
                                         </div>

@@ -8,6 +8,9 @@ import { AuthService } from 'app/core/auth/auth.service';
 import { ComentarioCustom } from 'app/models/comentario.interface';
 import { ComentarioSave } from 'app/models/comentarioSave.interface';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { Usuario } from 'app/models/usuario.interface';
+import { map, Subject, Subscription, takeUntil, timer } from 'rxjs';
+import { UserService } from 'app/core/user/user.service';
 
 
 @Component({
@@ -18,15 +21,20 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 })
 export class PresentacionesComponent implements OnInit {
 
+
+ 
+timerSubscription: Subscription; 
   selected: Date | null;
   public presentaciones: DocumentoCustom[];
-  tipoRol: string;
+  tipoRol: number;
   public comentario: ComentarioSave;
   panelOpenState = true;
+  user: Usuario;
+  private _unsubscribeAll: Subject<any> = new Subject<any>();
   
   constructor(public dialog: MatDialog,
     public folderService: FolderService,
-    private _authService: AuthService,
+    private _userService: UserService,
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
     ) { }
@@ -34,7 +42,7 @@ export class PresentacionesComponent implements OnInit {
   ngOnInit(): void {
 
     this.obtenerDocumentos();
-    this.tipoRol = this._authService.tipoUsuario;
+    
     console.log(this.tipoRol);
     this.comentario =  {
       comentario:'',
@@ -44,6 +52,24 @@ export class PresentacionesComponent implements OnInit {
       secuencia: 0,
       usuario: ''
     }
+
+    // Subscribe to the user service
+    this._userService.usuario$
+    .pipe((takeUntil(this._unsubscribeAll)))
+    .subscribe((user: Usuario) => {
+
+        console.log("user: "  + JSON.stringify(user))
+
+        this.user = user;
+        this.tipoRol = this.user.rol.id;
+    });
+
+     // timer(0, 10000) call the function immediately and every 10 seconds 
+     this.timerSubscription = timer(0, 60000).pipe( 
+      map(() => { 
+        this.obtenerDocumentos(); // load data contains the http request 
+      }) 
+    ).subscribe(); 
   }
 
   openDialog(event,nombreD) {
@@ -76,7 +102,7 @@ export class PresentacionesComponent implements OnInit {
     }else{
       this.comentario.comentario = "" + (<HTMLInputElement>document.getElementById("txtarea_"+event)).value.toString();
       this.comentario.id_documento = event;
-      this.comentario.usuario = this._authService.usuario;
+      this.comentario.usuario = this.user.nombre;
       this.folderService.guardarComentario(this.comentario).subscribe((data) => {
         this.obtenerDocumentos();
       });

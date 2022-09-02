@@ -16,12 +16,12 @@ export class FolderService {
 
     constructor(private http: HttpClient) {}
 
-    subirArchivo(presentacion: any, titulo_presentacion: any, descripcion_presentacion: any, taller: any): Observable<any> {
+    subirArchivo(presentacion: any, titulo_presentacion: any, descripcion_presentacion: any, taller: any, usuario: any): Observable<any> {
         var formData: any = new FormData();
         formData.append("archivo", presentacion);
         console.log(JSON.stringify(formData))
         //return this.http.post<Folder>(`${environment.backendURL}/documento/subir/${idOrganizacion}/`, formData);
-        return this.http.post<Folder>(`${environment.backendURL}/documento/subir/${titulo_presentacion}/${descripcion_presentacion}/${taller}/`, formData);
+        return this.http.post<Folder>(`${environment.backendURL}/documento/subir/${titulo_presentacion}/${descripcion_presentacion}/${taller}/${usuario}/`, formData);
     }
 
     obtenerDocumentos(): Observable<DocumentoCustom[]> {

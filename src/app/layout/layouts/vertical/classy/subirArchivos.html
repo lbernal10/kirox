@@ -19,12 +19,6 @@
             </p>
             <p>
                 <mat-form-field appearance="standard" style="width: 500px;">
-                    <mat-label>URL (opcional):</mat-label>
-                    <input matInput placeholder="Introduzca un link en relación a la presentación" formControlName="urlPresentacion">
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field appearance="standard" style="width: 500px;">
                     <mat-label>Taller</mat-label>
                     <mat-select placeholder="Seleccione el taller a relación con la presentación" formControlName="tallerSelect">
                         <mat-option>--</mat-option>
@@ -34,7 +28,7 @@
                     </mat-select>
                 </mat-form-field>
             </p>
-            <p>{{formTaller.get('tallerSelect').value | json}}</p>
+            <!--<p>{{formTaller.get('tallerSelect').value | json}}</p>-->
             <p>
                 <button type="button" mat-raised-button (click)="fileInput.click()">Seleccionar Archivo</button>
                 <input hidden (change)="onFileSelected($event)" #fileInput type="file" formControlName="archivo" accept=".txt,.pdf,.docx,.doc,.jpg,.xls">

@@ -1,32 +1,24 @@
-<div class="flex flex-col flex-auto w-full">
-
-    <div class="flex flex-wrap w-full max-w-screen-xl mx-auto p-6 md:p-8">
-
-        <!-- Title and action buttons -->
-        <div class="flex items-center justify-between w-full">
-            <div>
-                <div class="text-3xl font-semibold tracking-tight leading-8">Presentaciones</div>
-                <div class="font-medium tracking-tight text-secondary">Lista de los Presentaciones subidas en Kirox
-                </div>
-            </div>
-            <div class="flex items-center ml-6">
-
-                <!-- Actions menu (visible on xs) -->
-                <div class="sm:hidden">
-                    <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
-                        <mat-icon [svgIcon]="'heroicons_outline:dots-vertical'"></mat-icon>
-                    </button>
-                    <mat-menu #actionsMenu="matMenu">
-                        <button mat-menu-item>Export</button>
-                        <button mat-menu-item>Settings</button>
-                    </mat-menu>
-                </div>
+<div class="flex flex-col flex-auto min-w-0">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+        <div class="flex-1 min-w-0"> 
+            <!-- Title -->
+            <div class="mt-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                    Información Taller #1
+                </h2>
             </div>
         </div>
+    </div>
 
-        <div class="grid grid-cols-3 gap-8 w-full mt-8">
-            <div class="col-span-2 flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
-                <fuse-card style="border-left: 5px solid #e07e3c;" class="flex flex-col w-full mt-8" #expandableCard01="fuseCard" *ngFor="let presentacion of presentaciones">
+    <img
+    class="object-cover"
+    src="assets/images/flyer/taller1.jfif"
+    alt="taller1" class="center" style="width: 700px;">
+        <div class="text-2xl font-semibold leading-tight">Presentación relacionadas:</div>
+        <div class="col-span-2 flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+            <fuse-card style="border-left: 5px solid #e07e3c;" class="flex flex-col w-full mt-8" #expandableCard01="fuseCard" *ngFor="let presentacion of presentaciones" >
+                <div *ngIf="presentacion.taller == 1">
                     <div class="flex items-center mx-6 sm:mx-8 mt-6 mb-4">
                         <img class="w-10 h-10 rounded-full mr-4" src="assets/images/avatars/avatar1.png"
                             alt="Card cover image">
@@ -153,87 +145,12 @@
                                 </div>
 
                             </div>
-
-                            <!--<div class="relative flex flex-col mx-4 sm:mx-8 my-6">
-                                <div class="flex items-start">
-                                    <img class="w-8 h-8 rounded-full mr-4" src="assets/images/avatars/avatar1.png"
-                                        alt="Card cover image">
-                                    <div class="flex flex-col mt-0.5">
-                                        <span>
-                                            <b>Omar Fernandez</b> <br> Me gustaría saber más sobre los 3 procesos, por favor podrían contáctame, podría aportar al proceso.
-                                            ¡Saludos!
-                                        </span>
-                                        <div class="flex items-center text-sm text-secondary mt-2">
-                                            <span>Publicado &bull; 01/05/2022 16:45 p.m.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="relative flex flex-col mx-4 sm:mx-8 my-6">
-                                <div class="flex items-start">
-                                    <img class="w-8 h-8 rounded-full mr-4" src="assets/images/avatars/avatar1.png"
-                                        alt="Card cover image">
-                                    <div class="flex flex-col mt-0.5">
-                                        <span>
-                                            <b>Irving Rivera</b> <br> ¡El mejor equipo!
-                                        </span>
-                                        <div class="flex items-center text-sm text-secondary mt-2">
-                                            <span>Publicado &bull; 01/05/2022 16:45 p.m.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>-->
                         </div>
                     </ng-container>
-                </fuse-card>
-            </div>
-            <div class=" " >
-                <div class="mt-5 text-2xl font-semibold leading-tight">Listado de actividades</div>
-
-                <mat-accordion >
-                   
-                    <mat-expansion-panel (opened)="panelOpenState = true"
-                                         (closed)="panelOpenState = false" style="background-color: #ffe3b6;">
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          <b>Sesión #1</b>
-                        </mat-panel-title>
-                        <mat-panel-description>
-                          <p>13/08/2022</p> 
-                        </mat-panel-description>
-                      </mat-expansion-panel-header>
-                        <p>Inteligencia Colectiva: Valoración de tendencias para el
-                            diseño de la visión futura inclusiva del Proyecto Xonotli 4.0</p>
-                            <br>
-                            <p>
-                                <mat-icon>date_range</mat-icon> 
-                            </p>
-                      <p><b>Septiembre 13 9:00 AM - 11:00 AM</b></p>
-                     
-                    </mat-expansion-panel>
-                  </mat-accordion>
-
-                <!--<mat-card class="demo-inline-calendar-card pt-6 mt-4">
-                    <mat-calendar [(selected)]="selected"></mat-calendar>
-                </mat-card>-->
-
-                <div class="pt-6 grid justify-items-center">
-                    <button class="hidden sm:inline-flex ml-3" mat-flat-button [color]="'primary'" routerLink="/taller1">
-                        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:information-circle'"></mat-icon>
-                        <span class="ml-2">Información para taller #1</span>
-                    </button>
                 </div>
-
-
-            </div>
-
+                
+            </fuse-card>
         </div>
+    
 
-
-    </div>
 </div>
-
-

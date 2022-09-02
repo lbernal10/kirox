@@ -11,6 +11,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { FolderService } from 'app/service/folder.service';
+import { AuthService } from 'app/core/auth/auth.service';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
     navigation: Navigation;
     user: User;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
+    tipoRol: string;
     /**
      * Constructor
      */
@@ -34,7 +36,8 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
         private _userService: UserService,
         private _fuseMediaWatcherService: FuseMediaWatcherService,
         private _fuseNavigationService: FuseNavigationService,
-        public dialog: MatDialog
+        public dialog: MatDialog,
+        private _authService: AuthService
     ) {
     }
 
@@ -80,7 +83,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
                 this.isScreenSmall = !matchingAliases.includes('md');
             });
 
-
+            this.tipoRol = this._authService.tipoUsuario;
     }
 
     /**
@@ -141,7 +144,7 @@ export class subirArchivo  {
         description: 'description 2'
     }]
 
-   
+    
 
     constructor(private fb: FormBuilder,
         public folderService: FolderService,
@@ -155,13 +158,12 @@ export class subirArchivo  {
             tallerSelect: [null, Validators.required],
             nombrePresentacion: [null, Validators.required],
             descripcion: [null, Validators.required],
-            urlPresentacion: [null],
             archivo: [null, Validators.required]
         });
 
         const toSelect = this.talleres.find(c => c.id == 3);
         this.formTaller.get('tallerSelect').setValue(toSelect);
-
+        
         
     }
 
@@ -175,10 +177,9 @@ export class subirArchivo  {
 
     public subirArchivo() : void {
         
-       // this.formTaller.get('archivo').setValue(this.selectedFile);
         console.log(this.archivo);
         console.log(this.formTaller.get('tallerSelect').value.id);
-        this.folderService.subirArchivo(this.archivo, this.formTaller.get('nombrePresentacion').value, this.formTaller.get('descripcion').value, this.formTaller.get('urlPresentacion').value, this.formTaller.get('tallerSelect').value.id).subscribe((data) => {
+        this.folderService.subirArchivo(this.archivo, this.formTaller.get('nombrePresentacion').value, this.formTaller.get('descripcion').value, this.formTaller.get('tallerSelect').value.id).subscribe((data) => {
             this.messageService.add({
                 severity: 'success',
                 summary: 'Confirmado',
@@ -186,6 +187,7 @@ export class subirArchivo  {
             });
             alert('Se subio la presentación.');
             this.dialog.closeAll();
+            window.location.reload();
         });
     }
 

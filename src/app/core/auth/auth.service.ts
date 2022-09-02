@@ -36,6 +36,26 @@ export class AuthService
         return localStorage.getItem('accessToken') ?? '';
     }
 
+    set usuario(usuario: string)
+    {
+        localStorage.setItem('usuario', usuario);
+    }
+
+    get usuario(): string
+    {
+        return localStorage.getItem('usuario') ?? '';
+    }
+
+    set tipoUsuario(tipoUsuario: string)
+    {
+        localStorage.setItem('tipoUsuario', tipoUsuario);
+    }
+
+    get tipoUsuario(): string
+    {
+        return localStorage.getItem('tipoUsuario') ?? '';
+    }
+
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------
@@ -85,6 +105,9 @@ export class AuthService
                 // Store the user on the user service
                 this._userService.user = response.user;
 
+                this.tipoUsuario = '3';
+
+                this.usuario = 'David Perez Negrete';
                 // Return a new observable with the response
                 return of(response);
             })

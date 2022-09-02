@@ -79,6 +79,7 @@ export const appRoutes: Route[] = [
             {path: 'presentaciones', loadChildren: () => import('app/modules/admin/presentaciones/presentaciones.module').then(m => m.PresentacionesModule)},
             {path: 'aliados', loadChildren: () => import('app/modules/admin/aliados/aliados.module').then(m => m.AliadosModule)},
             {path: 'alcance', loadChildren: () => import('app/modules/admin/alcance/alcance.module').then(m => m.AlcanceModule)},
+            {path: 'taller1', loadChildren: () => import('app/modules/admin/taller1/taller1.module').then(m => m.Taller1Module)},
         ]
     }
 ];

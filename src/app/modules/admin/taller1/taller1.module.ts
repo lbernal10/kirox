@@ -14,31 +14,25 @@ import { SharedModule } from 'app/shared/shared.module';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
-import { PresentacionesComponent, viewDocument, DialogAnimationsExampleDialog } from './presentaciones.component';
-
-import { FuseConfirmationModule } from '@fuse/services/confirmation';
+import { Taller1Component, viewDocument, DialogAnimationsExampleDialog } from './taller1.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
-import { MessagesModule } from 'primeng/messages';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { DialogModule } from 'primeng/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
 
-const presentacionesRoutes: Route[] = [
+const taller1Routes: Route[] = [
     {
         path     : '',
-        component: PresentacionesComponent
+        component: Taller1Component
     }
 ];
 
 @NgModule({
     declarations: [
-        PresentacionesComponent,
+        Taller1Component,
         viewDocument,
         DialogAnimationsExampleDialog
     ],
     imports     : [
-        RouterModule.forChild(presentacionesRoutes),
+        RouterModule.forChild(taller1Routes),
         MatIconModule,
         MatMenuModule,
         MatButtonModule,
@@ -56,15 +50,10 @@ const presentacionesRoutes: Route[] = [
         MatDatepickerModule,
         MatNativeDateModule,
         MatCardModule,
-
-        FuseConfirmationModule,
         MatDialogModule,
-        MessagesModule,
-        ConfirmDialogModule,
-        DialogModule,
         MatExpansionModule
     ]
 })
-export class PresentacionesModule
+export class Taller1Module
 {
 }

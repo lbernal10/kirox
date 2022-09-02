@@ -1,3 +1,5 @@
+import { ComentarioCustom } from "./comentario.interface";
+
 export interface DocumentoCustom {
     idDocumento: number;
     nombreDocumento: string;
@@ -12,5 +14,7 @@ export interface DocumentoCustom {
     urlOpcional: string;
     totalMetadatos: number;
     totalDocumentos: number;
-
+    taller: number;
+    comentarios: ComentarioCustom[];
+    totalComentarios: number;
 }

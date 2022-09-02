@@ -39,7 +39,7 @@ export class FolderService {
 
     eliminar(id: number): Observable<ComentarioSave> {
         console.log(id);
-        return this.http.put<ComentarioSave>(`${this.url}/documento/delete/${id}/`, {
+        return this.http.put<ComentarioSave>(`${environment.backendURL}/documento/delete/${id}/`, {
             headers: this.httpHeaders,
         });
     }

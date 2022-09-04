@@ -44,15 +44,19 @@ export class AuthSignUpComponent implements OnInit
      */
     ngOnInit(): void
     {
+        let MOBILE_PATTERN = /[0-9\+\-\ ]/;
+
         // Create the form
         this.signUpForm = this._formBuilder.group({
                 nombre      : ['', Validators.required],
                 organizacion      : ['', Validators.required],
                 telefono      : ['', Validators.required],
                 email     : ['', [Validators.required, Validators.email]],
-                password  : ['', Validators.required]
+                password  : ['', Validators.required],
+                agreements  : [ false, Validators.requiredTrue]
             }
         );
+        
     }
 
     // -----------------------------------------------------------------------------------------------------

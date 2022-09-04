@@ -132,7 +132,7 @@
                     class="fuse-mat-button-large w-full mt-6"
                     mat-flat-button
                     [color]="'primary'"
-                    [disabled]="signUpForm.disabled"
+                    [disabled]="this.signUpForm.invalid"
                     (click)="signUp()">
                     <span *ngIf="!signUpForm.disabled">
                         Crea tu cuenta

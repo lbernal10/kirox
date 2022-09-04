@@ -26,26 +26,17 @@
     #userActions="matMenu">
     <button mat-menu-item>
         <span class="flex flex-col leading-none">
-            <span>Registrado como</span>
+            <span>Registrado con </span>
             <span class="mt-1.5 text-md font-medium">{{user.correo}}</span>
         </span>
     </button>
     <mat-divider class="my-2"></mat-divider>
     <button mat-menu-item>
-        <mat-icon [svgIcon]="'heroicons_outline:user-circle'"></mat-icon>
-        <span>Perfil</span>
+        <span class="flex flex-col leading-none">
+            <span>Rol: </span>
+            <span class="mt-1.5 text-md font-medium">{{user.rol.nombre}}</span>
+        </span>
     </button>
-    <button mat-menu-item>
-        <mat-icon [svgIcon]="'heroicons_outline:cog'"></mat-icon>
-        <span>Ajustes</span>
-    </button>
-    <button
-        mat-menu-item
-        [matMenuTriggerFor]="userStatus">
-        <mat-icon [svgIcon]="'heroicons_outline:dots-circle-horizontal'"></mat-icon>
-        <span>Estatus</span>
-    </button>
-    <mat-divider class="my-2"></mat-divider>
     <button
         mat-menu-item
         (click)="signOut()">

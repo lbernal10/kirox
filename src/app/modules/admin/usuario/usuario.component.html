@@ -68,6 +68,7 @@
                     <th>Correo</th>
                     <th>Rol</th>
                     <th>Telefono</th>
+                    <th>Estatus</th>
                     <th>Acciones</th>
                 </tr>
             </ng-template>
@@ -78,6 +79,8 @@
                     <td>{{ usu.correo }}</td>
                     <td>{{ usu.rolNombre }}</td> 
                     <td>{{ usu.telefono }}</td>
+                    <td *ngIf="usu.estatus === 1">Activo</td>
+                    <td *ngIf="usu.estatus === 0">Solicitud pendiente / Inactivo</td>
                     <td>
                         <button
                             pButton

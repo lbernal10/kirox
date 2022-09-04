@@ -5,10 +5,12 @@ import { fuseAnimations } from '@fuse/animations';
 import { FuseValidators } from '@fuse/validators';
 import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector     : 'auth-reset-password',
     templateUrl  : './reset-password.component.html',
+    styleUrls: ['./reset-password.scss'],
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
@@ -22,13 +24,16 @@ export class AuthResetPasswordComponent implements OnInit
     };
     resetPasswordForm: FormGroup;
     showAlert: boolean = false;
+    tokenPassword: string;
 
     /**
      * Constructor
      */
     constructor(
         private _authService: AuthService,
-        private _formBuilder: FormBuilder
+        private _formBuilder: FormBuilder,
+        private router: Router,
+        private activatedRoute: ActivatedRoute
     )
     {
     }
@@ -51,6 +56,9 @@ export class AuthResetPasswordComponent implements OnInit
                 validators: FuseValidators.mustMatch('password', 'passwordConfirm')
             }
         );
+
+        this.tokenPassword = this.activatedRoute.snapshot.params.tokenPassword;
+        console.log("Token: " +  this.tokenPassword);
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -74,8 +82,17 @@ export class AuthResetPasswordComponent implements OnInit
         // Hide the alert
         this.showAlert = false;
 
+        let datos: any;
+
+        datos = {
+            password: this.resetPasswordForm.get('password').value,
+            confirmarPassword: this.resetPasswordForm.get('passwordConfirm').value,
+            tokenPassword: this.tokenPassword
+        };
+
+
         // Send the request to the server
-        this._authService.resetPassword(this.resetPasswordForm.get('password').value)
+        this._authService.resetPassword(datos)
             .pipe(
                 finalize(() => {
 
@@ -95,7 +112,7 @@ export class AuthResetPasswordComponent implements OnInit
                     // Set the alert
                     this.alert = {
                         type   : 'success',
-                        message: 'Your password has been reset.'
+                        message: 'Tu contraseña ha sido restablecida.'
                     };
                 },
                 (response) => {
@@ -103,7 +120,7 @@ export class AuthResetPasswordComponent implements OnInit
                     // Set the alert
                     this.alert = {
                         type   : 'error',
-                        message: 'Something went wrong, please try again.'
+                        message: 'Algo salió mal. Por favor, vuelva a intentarlo.'
                     };
                 }
             );

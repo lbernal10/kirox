@@ -10,25 +10,29 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/inicio'
     },
     {
-        id   : 'organizacion',
-        title: 'Organización',
-        type : 'basic',
-        icon : 'heroicons_solid:cube-transparent',
-        link : '/organizacion'
-    },
-    {
         id   : 'usuario',
         title: 'Usuarios',
         type : 'basic',
         icon : 'heroicons_outline:user-group',
         link : '/usuario'
-    },
+    }
+];
+export const defaultNavigationStakeholder: FuseNavigationItem[] = [
     {
-        id   : 'bitacora',
-        title: 'Bitacora',
+        id   : 'inicio',
+        title: 'Inicio',
         type : 'basic',
-        icon : 'heroicons_outline:clipboard-list',
-        link : '/bitacora'
+        icon : 'heroicons_outline:home',
+        link : '/inicio'
+    }
+];
+export const defaultNavigationConsultante: FuseNavigationItem[] = [
+    {
+        id   : 'inicio',
+        title: 'Inicio',
+        type : 'basic',
+        icon : 'heroicons_outline:home',
+        link : '/inicio'
     }
 ];
 export const compactNavigation: FuseNavigationItem[] = [

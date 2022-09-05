@@ -16,7 +16,7 @@ import { SearchModule } from 'app/layout/common/search/search.module';
 import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
-import { ClassyLayoutComponent, subirArchivo } from 'app/layout/layouts/vertical/classy/classy.component';
+import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NoRightClickDirective } from 'app/no-right-click.directive';
 
@@ -32,8 +32,7 @@ import { MessagesModule } from 'primeng/messages';
 @NgModule({
     declarations: [
         ClassyLayoutComponent,
-        NoRightClickDirective,
-        subirArchivo
+        NoRightClickDirective
     ],
     imports     : [
         HttpClientModule,

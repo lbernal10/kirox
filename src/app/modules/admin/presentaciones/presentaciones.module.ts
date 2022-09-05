@@ -14,7 +14,7 @@ import { SharedModule } from 'app/shared/shared.module';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
-import { PresentacionesComponent, viewDocument, DialogAnimationsExampleDialog } from './presentaciones.component';
+import { PresentacionesComponent, viewDocument, DialogAnimationsExampleDialog, subirArchivo } from './presentaciones.component';
 
 import { FuseConfirmationModule } from '@fuse/services/confirmation';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -23,6 +23,7 @@ import { MessagesModule } from 'primeng/messages';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
 
 const presentacionesRoutes: Route[] = [
     {
@@ -35,7 +36,8 @@ const presentacionesRoutes: Route[] = [
     declarations: [
         PresentacionesComponent,
         viewDocument,
-        DialogAnimationsExampleDialog
+        DialogAnimationsExampleDialog,
+        subirArchivo
     ],
     imports     : [
         RouterModule.forChild(presentacionesRoutes),
@@ -62,7 +64,8 @@ const presentacionesRoutes: Route[] = [
         MessagesModule,
         ConfirmDialogModule,
         DialogModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatSelectModule
     ]
 })
 export class PresentacionesModule

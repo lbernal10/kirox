@@ -11,6 +11,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { Usuario } from 'app/models/usuario.interface';
 import { map, Subject, Subscription, takeUntil, timer } from 'rxjs';
 import { UserService } from 'app/core/user/user.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -120,6 +121,15 @@ timerSubscription: Subscription;
     });
   }
 
+  openDialogSubirArchivo() {
+    const dialogRef = this.dialog.open(subirArchivo);
+
+    dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+        this.obtenerDocumentos();
+    });
+}
+
 }
 
 @Component({
@@ -159,6 +169,85 @@ export class DialogAnimationsExampleDialog {
     this.folderService.eliminar(event).subscribe((data) => {
         alert('Comentario eliminado');
     });
+  }
+
+}
+
+
+@Component({
+  selector: 'subirArchivo',
+  templateUrl: 'subirArchivos.html',
+  styleUrls: ['subirArchivo.scss'],
+  providers: [ConfirmationService, MessageService]
+})
+export class subirArchivo  {
+  formTaller: FormGroup;
+
+  talleres = [{
+      id: 1,
+      name: 'Taller 1',
+      description: 'description 1'
+  }, {
+      id: 2,
+      name: 'Taller 2',
+      description: 'description 2'
+  }]
+
+  user: Usuario;
+  private _unsubscribeAll: Subject<any> = new Subject<any>();
+
+  constructor(private fb: FormBuilder,
+      public folderService: FolderService,
+      private messageService: MessageService,
+      public dialog: MatDialog,
+      private _userService: UserService
+      ) { }
+
+  ngOnInit() {
+
+      this.formTaller = this.fb.group({
+          tallerSelect: [null, Validators.required],
+          nombrePresentacion: [null, Validators.required],
+          descripcion: [null, Validators.required],
+          archivo: [null, Validators.required]
+      });
+
+      const toSelect = this.talleres.find(c => c.id == 3);
+      this.formTaller.get('tallerSelect').setValue(toSelect);
+      
+      // Subscribe to the user service
+      this._userService.usuario$
+          .pipe((takeUntil(this._unsubscribeAll)))
+          .subscribe((user: Usuario) => {
+
+              console.log("user: "  + JSON.stringify(user))
+
+              this.user = user;
+          });
+  }
+
+  selectedFile: any = null;
+  private archivo: File = null;
+
+  onFileSelected(event: any): void {
+      this.selectedFile = event.target.files[0] ?? null;
+      this.archivo = event.target.files[0];
+  }
+
+  public subirArchivo() : void {
+      
+      console.log(this.archivo);
+      console.log(this.formTaller.get('tallerSelect').value.id);
+      this.folderService.subirArchivo(this.archivo, this.formTaller.get('nombrePresentacion').value, this.formTaller.get('descripcion').value, this.formTaller.get('tallerSelect').value.id, this.user.nombre).subscribe((data) => {
+          this.messageService.add({
+              severity: 'success',
+              summary: 'Confirmado',
+              detail: 'Se subio la presentación.',
+          });
+          alert('Se subio la presentación.');
+          this.dialog.closeAll();
+          
+      });
   }
 
 }

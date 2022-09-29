@@ -262,6 +262,25 @@
                       <p><b>Septiembre 13 9:00 AM - 11:00 AM</b></p>
                      
                     </mat-expansion-panel>
+
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false" style="background-color: #ffe3b6;">
+                        <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <b>Sesión #2</b>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            <p>13/10/2022</p> 
+                        </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>Valoración de escenarios.</p>
+                            <br>
+                            <p>
+                                <mat-icon>date_range</mat-icon> 
+                            </p>
+                        <p><b>Octubre 13</b></p>
+
+                        </mat-expansion-panel>
                   </mat-accordion>
 
                 <!--<mat-card class="demo-inline-calendar-card pt-6 mt-4">
@@ -274,6 +293,13 @@
                         <span class="ml-2">Información para taller #1</span>
                     </button>
                 </div>
+
+                <!--<div class="pt-6 grid justify-items-center" *ngIf="user.rol.id == 1 || user.rol.id == 3">
+                    <button class="hidden sm:inline-flex ml-3" mat-flat-button [color]="'primary'" >
+                        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:information-circle'"></mat-icon>
+                        <span class="ml-2">Información para taller #2</span>
+                    </button>
+                </div>-->
 
 
             </div>

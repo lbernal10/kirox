@@ -5,7 +5,7 @@
             <!-- Title -->
             <div class="mt-2">
                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-                    Información Taller #1
+                    Información Taller #2
                 </h2>
             </div>
         </div>
@@ -13,12 +13,12 @@
 
     <img
     class="object-cover"
-    src="assets/images/flyer/flyerTaller1.jpeg"
+    src="assets/images/flyer/flyertemporal.png"
     alt="taller1" class="center" style="width: 700px;">
         <div class="text-2xl font-semibold leading-tight">Presentación relacionadas:</div>
         <div class="col-span-2 flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
             <fuse-card style="border-left: 5px solid #e07e3c;" class="flex flex-col w-full mt-8" #expandableCard01="fuseCard" *ngFor="let presentacion of presentaciones" >
-                <div *ngIf="presentacion.taller == 1">
+                <div *ngIf="presentacion.taller == 2">
                     <div class="flex items-center mx-6 sm:mx-8 mt-6 mb-4">
                         <img class="w-10 h-10 rounded-full mr-4" src="assets/images/avatars/avatar1.png"
                             alt="Card cover image">

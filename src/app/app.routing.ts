@@ -81,6 +81,7 @@ export const appRoutes: Route[] = [
             {path: 'aliados', loadChildren: () => import('app/modules/admin/aliados/aliados.module').then(m => m.AliadosModule)},
             {path: 'alcance', loadChildren: () => import('app/modules/admin/alcance/alcance.module').then(m => m.AlcanceModule)},
             {path: 'taller1', loadChildren: () => import('app/modules/admin/taller1/taller1.module').then(m => m.Taller1Module)},
+            {path: 'taller2', loadChildren: () => import('app/modules/admin/taller2/taller2.module').then(m => m.Taller2Module)},
             {path: 'usuario', loadChildren: () => import('app/modules/admin/usuario/usuario.module').then(m => m.UsuarioModule)}
         ]
     }

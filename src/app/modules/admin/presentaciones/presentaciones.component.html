@@ -294,6 +294,13 @@
                     </button>
                 </div>
 
+                <div class="pt-6 grid justify-items-center" *ngIf="user.rol.id == 1 || user.rol.id == 3">
+                    <button class="hidden sm:inline-flex ml-3" mat-flat-button [color]="'primary'" routerLink="/taller2">
+                        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:information-circle'"></mat-icon>
+                        <span class="ml-2">Información para taller #2</span>
+                    </button>
+                </div>
+
                 <!--<div class="pt-6 grid justify-items-center" *ngIf="user.rol.id == 1 || user.rol.id == 3">
                     <button class="hidden sm:inline-flex ml-3" mat-flat-button [color]="'primary'" >
                         <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:information-circle'"></mat-icon>
